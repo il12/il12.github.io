@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Поиск вакансий</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Поле ввода -->
+      <div class="area1 hidden-xs hidden-sm col-md-12 col-lg-12">
+        <input id="search_input" class="form-control col-sm-offset-4 c col-lg-offset-4 col-xs-10 col-sm-6 col-md-6 col-lg-6" placeholder="Введите запрос">
+        <button id="search_button" class="btn btn-primary">Найти</button>
+      </div>
+      <!-- Кнопка вызова фильтров для mobile-->
+      <div class="hidden-md hidden-lg col-xs-12 col-sm-12">
+        <button data-toggle="modal" data-target="#filterModal" id="search_button" class="btn btn-primary btn-block">Фильтры</button>
+      </div>
+      <!-- Фильтры -->
+      <div id="filter" class="area4 hidden-xs hidden-sm col-md-3 col-lg-3">
+        <div class="filters_field area3 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="filtres_div col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3>Фильтры</h3>
+          </div>
+          <!-- Компании -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <form>
+              <p>
+                <input id="f_comp" class="form-control" name="company_field" list="company_list" placeholder="Компании">
+              </p>
+              <datalist id="company_list">
+              </datalist>
+            </form>
+          </div>
+          <!-- Языки -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <form>
+              <p>
+                <input id="f_lang" class="form-control" name="lang_field" list="lang_list" placeholder="Языки программирования">
+              </p>
+              <datalist id="lang_list">
+              </datalist>
+            </form>
+          </div>
+          <!-- Опыт работы -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <form>
+              <p>
+                <input id="f_exp" class="form-control" name="exp_field" list="exp_list" placeholder="Опыт работы">
+              </p>
+              <datalist id="exp_list">
+              </datalist>
+            </form>
+          </div>
+          <!-- Город -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <form>
+              <p>
+                <input id="f_city" class="form-control" name="city_field" list="city_list" placeholder="Город">
+              </p>
+              <datalist id="city_list">
+              </datalist>
+            </form>
+          </div>
+          <!-- Зарплата -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="filter_salary_label">
+              <h4>Зарплата</h4>
+            </div>
+            <div class="col-md-12 col-lg-12">
+              <input id="f_salary_min" class="form-control col-sm-6 col-md-6 col-lg-6" placeholder="От">
+            </div>
+            <div class="col-md-12 col-lg-12">
+              <input id="f_salary_max" class="form-control col-sm-6 col-md-6 col-lg-6" placeholder="До">
+            </div>
+          </div>
+
+          <div class="col-sm-offset-6 col-md-offset-6 c col-lg-offset-6 col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <button id="filtres_apply_button" class="btn btn-primary">Применить</button>
+          </div>
+        </div>
+      </div>
+      <!--Фильтры для mobile устройств -->
+      <div id="filterModal" class="modal fade hidden-md hidden-lg">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Фильтры</h4>
+            </div>
+            <div class="modal-body">
+              <!-- Компании -->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <form>
+                  <p>
+                    <input id="mobile_f_comp" class="form-control" name="company_field" list="company_list" placeholder="Компании">
+                  </p>
+                  <datalist id="company_list">
+                  </datalist>
+                </form>
+              </div>
+              <!-- Языки -->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <form>
+                  <p>
+                    <input id="mobile_f_lang" class="form-control" name="lang_field" list="lang_list" placeholder="Языки программирования">
+                  </p>
+                  <datalist id="lang_list">
+                  </datalist>
+                </form>
+              </div>
+              <!-- Опыт работы -->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <form>
+                  <p>
+                    <input id="mobile_f_exp" class="form-control" name="exp_field" list="exp_list" placeholder="Опыт работы">
+                  </p>
+                  <datalist id="exp_list">
+                  </datalist>
+                </form>
+              </div>
+              <!-- Город -->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <form>
+                  <p>
+                    <input id="mobile_f_city" class="form-control" name="city_field" list="city_list" placeholder="Город">
+                  </p>
+                  <datalist id="city_list">
+                  </datalist>
+                </form>
+              </div>
+              <!-- Зарплата -->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="filter_salary_label">
+                  <h4>Зарплата</h4>
+                </div>
+                <div class="col-md-12 col-lg-12">
+                  <input id="mobile_f_salary_min" class="form-control col-sm-6 col-md-6 col-lg-6" placeholder="От">
+                </div>
+                <div class="col-md-12 col-lg-12">
+                  <input id="mobile_f_salary_max" class="form-control col-sm-6 col-md-6 col-lg-6" placeholder="До">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="mobile_filtres_apply_button" data-dismiss="modal" class="btn btn-primary">Применить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Основной контент -->
+      <div id="main_content" class="area3 col-xs-12 col-sm-7 col-md-7 col-lg-7">
+      </div>
+      <!-- Реклама -->
+      <div class="area2 hidden-xs col-sm-2 col-md-2 col-lg-2">
+
+      </div>
+    </div>
+  </div>
+  <script src="./scripts.js"></script>
+
+</body>
+
+</html>
