@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="inp">
+<button id="bt">btn</button>
+<script>
+    let button = document.getElementById('bt');
+    button.addEventListener('click',async ()=>{
+        let str = document.getElementById('inp').value;
+        const digestHex = await digestMessage(str);
+        document.getElementById('inp').value = digestHex;
+    });
+
+    async function digestMessage(message) {
+        return await fetch(`https://kodaktor.ru/api/sha1/${message}`).then(x=>x.json()).then(x=>x.sha1)
+    }
+
+</script>
+</body>
+</html>
