@@ -9,14 +9,18 @@
 <button id="bt">btn</button>
 <script>
     let button = document.getElementById('bt');
-    button.addEventListener('click',async ()=>{
+    button.addEventListener('click', async () => {
         let str = document.getElementById('inp').value;
         const digestHex = await digestMessage(str);
         document.getElementById('inp').value = digestHex;
     });
 
     async function digestMessage(message) {
-        return await fetch(`https://kodaktor.ru/api/sha1/${message}`).then(x=>x.json()).then(x=>x.sha1)
+        const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
+        const hashBuffer = await crypto.subtle.digest('SHA-1', msgUint8);           // hash the message
+        const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+        return hashHex;
     }
 
 </script>
