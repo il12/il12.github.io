@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сложность</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="synchroDiff.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="program col-6 border-right">
+            <div class="mt-3 row align-items-center">
+                <div class=" col">
+                    <label for="program">Program</label>
+                    <select id="program" name="program" class="custom-select">
+                        <option disabled value>Choose...</option>
+                        <option value="solo">Solo</option>
+                        <option value="duet">Duet</option>
+                        <option value="team">Team</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="setProgram">Set program type</label>
+                    <button class="btn btn-primary btn-block" id="setProgram">Set</button>
+                </div>
+            </div>
+            <div hidden id="fileBlock" class="mt-3 row align-items-center">
+                <div class="col">
+                    <label for="name">Name</label>
+                    <input class="form-control" id="name" type="text" placeholder="Filename...">
+                </div>
+                <div class="col">
+                    <label for="saveProgram">Save program to file</label>
+                    <button class="btn btn-primary btn-block" id="saveProgram">Save</button>
+                </div>
+            </div>
+            <div hidden id="resBlock" class="mt-3 row">
+                <div class="col">
+                    <label for="sumDuration">Duration</label>
+                    <input class="form-control" disabled id="sumDuration" type="time" value="00:00">
+                </div>
+                <div class="col">
+                    <label for="sumMark">Difficulty</label>
+                    <input class="form-control" disabled id="sumMark" type="text" value="0.0">
+                </div>
+            </div>
+            <div hidden class="mt-3 row team-only">
+                <div class="col">
+                    <div class="form-check">
+                        <input id="team-unique" type="checkbox" class="form-check-input">
+                        <label for="team-unique" class="form-check-label">Hight level difficulty pattern
+                            changes
+                            (moving patterns, passing through patterns, close spaced, quick and sharp
+                            surface changes)
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div hidden id="addFragmentBlock" class="mt-3 row">
+                <div class="col">
+                    <div class="row" id="content">
+                        <div class="col content">
+                            <button disabled class="newSlice btn btn-outline-primary btn-block">Create new
+                                fragment
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div id="content-list" class="col"></div>
+                    </div>
+                    <a id="downloadAnchorElem" style="display:none"></a>
+                </div>
+            </div>
+        </div>
+        <div class="video col-6">
+            <div class="mt-3 row">
+                <div class="col">
+                    <label for="video">Select your .mp4 file</label>
+                    <input id="video" class="form-control-file" type="file" accept="video/mp4">
+                </div>
+            </div>
+            <div class="mt-3 row">
+                <div class="col">
+                    <video hidden id="videoPlayer" controls="controls" poster="Video.svg"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modalAddNewSlice">
+    <div class="modal-content">
+        <div class="modal-header row">
+            <div class="col">
+                <h2>New Fragment</h2>
+            </div>
+        </div>
+        <div class="bg-warning row">
+            <div class="col">
+                Please, firstly select type of the program slice. Be careful, changing type dismiss all changes you've
+                made!
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col">
+                    <label for="fragmentType">Type</label>
+                    <select id="fragmentType" class="custom-select">
+                        <option value="hybrid">Hybrid</option>
+                        <option value="transition">Transition</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="sliceDuration">Duration (sec)</label>
+                    <input id="sliceDuration" type="number" class="form-control">
+                </div>
+            </div>
+            <div class="row hybrid-only">
+                <div class="col">
+                    <label for="movementsNumber">Number of Movements</label>
+                    <input class='form-control' id="movementsNumber" type="number">
+                </div>
+                <div class="col">
+                    <label for="legs">Legs</label>
+                    <select class="custom-select" id="legs">
+                        <option value="1">One leg (raising or lifting)</option>
+                        <option value="2">Two legs (raising or lifting)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row modifiers">
+                <div class="col">
+                    <button class="modifierAdder btn btn-outline-primary">Add modifier</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex flex-row flex-wrap card-deck" id="modifier-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer mt-3 row">
+            <button class="saveSlice btn btn-primary">Save</button>
+            <button class="closeAddNewSlice btn btn-danger">Dismiss</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modalAddNewModifier">
+    <div class="modal-content">
+        <div class="modal-header row">
+            <div class="col">
+                New Modifier
+            </div>
+        </div>
+        <div class="modal-body row">
+            <div id="modifiers" class="col modifiers">
+            </div>
+        </div>
+        <div class="modal-footer row">
+            <div class="col">
+                <button class="closeAddNewModifier btn btn-danger">Dismiss</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="application/javascript" src="synchroDiff.js"></script>
+</body>
+</html>
