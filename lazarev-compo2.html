@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Кастомные элементы</title><meta charset="utf-8">
+ </head>
+ <body>
+  <article>
+    <h1>Кастомные элементы</h1>
+    <el-cntr val="1"></el-cntr> <el-cntr val="16"></el-cntr>
+  </article><script>{
+  
+  class Counter extends HTMLElement {
+    static get observedAttributes() {return ['val']}
+
+    constructor() {
+		super()
+		let shadow = this.attachShadow({mode: 'open'});
+        this.button = document.createElement('button');
+      	this.button.innerHTML="⬆️"+this.getAttribute('val');
+      	this.button.addEventListener('click',this.click.bind(this))
+        shadow.appendChild(this.button);
+    };
+
+    click(){
+     	add(this)	
+    }
+ 	
+  	attributeChangedCallback(name, oldValue, newValue) {
+    	this.button.innerHTML = "⬆️"+newValue
+    }
+  }
+    
+  customElements.define('el-cntr', Counter);
+
+   function add(elem){
+     console.log(elem)
+     let shadow = elem.shadowRoot;
+     let val = Number(elem.getAttribute('val'));
+     elem.setAttribute('val',val+1)
+   }
+   
+   document.getElementsByName('el-cntr')
+}</script>
+   <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/kXcZbfir6h0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+   
+   <p><a target="_blank" href="https://component.kitchen/blog/posts/a-history-of-the-html-slot-element">История о слотах</a></p>
+--> 
+</body>
+</html>
