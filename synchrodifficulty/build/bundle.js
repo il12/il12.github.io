@@ -7933,7 +7933,7 @@ var app = (function () {
     			t1 = space();
     			div2 = element("div");
     			div1 = element("div");
-    			div1.textContent = "v. 0.5.1";
+    			div1.textContent = "v. 0.5.2";
     			t3 = space();
     			create_component(main.$$.fragment);
     			t4 = space();
