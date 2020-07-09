@@ -688,6 +688,8 @@ var app = (function () {
 
         let hybrids = program.fragments.filter((item)=>item.type === "hybrid");
 
+        console.log(hybrids);
+
         let hybridsSeconds = hybrids.reduce((accumulator,fragment)=>{
             return accumulator+=Number(fragment.duration);
         },0);
@@ -1177,11 +1179,11 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[35] = list[i];
+    	child_ctx[38] = list[i];
     	return child_ctx;
     }
 
-    // (202:4) <div slot="header">
+    // (168:4) <div slot="header">
     function create_header_slot_1(ctx) {
     	let div0;
     	let div1;
@@ -1193,11 +1195,11 @@ var app = (function () {
     			div1 = element("div");
     			h2 = element("h2");
     			h2.textContent = "New Fragment";
-    			add_location(h2, file$2, 203, 12, 9111);
+    			add_location(h2, file$2, 169, 12, 6973);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$2, 202, 8, 9080);
+    			add_location(div1, file$2, 168, 8, 6942);
     			attr_dev(div0, "slot", "header");
-    			add_location(div0, file$2, 201, 4, 9051);
+    			add_location(div0, file$2, 167, 4, 6913);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1213,14 +1215,14 @@ var app = (function () {
     		block,
     		id: create_header_slot_1.name,
     		type: "slot",
-    		source: "(202:4) <div slot=\\\"header\\\">",
+    		source: "(168:4) <div slot=\\\"header\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (227:12) {#if $fragmentState.type === "pair acrobatics"}
+    // (193:12) {#if $fragmentState.type === "pair acrobatics"}
     function create_if_block_1(ctx) {
     	let label0;
     	let t0;
@@ -1275,40 +1277,40 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$2, 230, 24, 10578);
+    			add_location(option0, file$2, 196, 24, 8440);
     			option1.__value = option1_value_value = 0.1;
     			option1.value = option1.__value;
-    			add_location(option1, file$2, 231, 24, 10665);
+    			add_location(option1, file$2, 197, 24, 8527);
     			option2.__value = option2_value_value = 0.2;
     			option2.value = option2.__value;
-    			add_location(option2, file$2, 232, 24, 10730);
+    			add_location(option2, file$2, 198, 24, 8592);
     			select0.required = true;
     			attr_dev(select0, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[9].direction === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[20].call(select0));
-    			add_location(select0, file$2, 228, 20, 10419);
-    			add_location(label0, file$2, 227, 16, 10381);
+    			if (/*$fragmentState*/ ctx[9].direction === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[21].call(select0));
+    			add_location(select0, file$2, 194, 20, 8281);
+    			add_location(label0, file$2, 193, 16, 8243);
     			option3.selected = "selected";
     			option3.disabled = true;
     			option3.__value = "";
     			option3.value = option3.__value;
-    			add_location(option3, file$2, 238, 24, 11012);
+    			add_location(option3, file$2, 204, 24, 8874);
     			option4.__value = option4_value_value = 0;
     			option4.value = option4.__value;
-    			add_location(option4, file$2, 239, 24, 11099);
+    			add_location(option4, file$2, 205, 24, 8961);
     			option5.__value = option5_value_value = 0.1;
     			option5.value = option5.__value;
-    			add_location(option5, file$2, 240, 24, 11158);
+    			add_location(option5, file$2, 206, 24, 9020);
     			select1.required = true;
     			attr_dev(select1, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[9].support === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[22].call(select1));
-    			add_location(select1, file$2, 237, 20, 10886);
-    			add_location(label1, file$2, 236, 16, 10845);
+    			if (/*$fragmentState*/ ctx[9].support === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[23].call(select1));
+    			add_location(select1, file$2, 203, 20, 8748);
+    			add_location(label1, file$2, 202, 16, 8707);
     			input.required = true;
     			attr_dev(input, "type", "number");
     			attr_dev(input, "min", "0");
     			attr_dev(input, "class", "form-control");
-    			add_location(input, file$2, 245, 20, 11314);
-    			add_location(label2, file$2, 244, 16, 11271);
+    			add_location(input, file$2, 211, 20, 9176);
+    			add_location(label2, file$2, 210, 16, 9133);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label0, anchor);
@@ -1317,7 +1319,7 @@ var app = (function () {
     			append_dev(select0, option0);
     			append_dev(select0, option1);
     			append_dev(select0, option2);
-    			/*select0_binding*/ ctx[19](select0);
+    			/*select0_binding*/ ctx[20](select0);
     			select_option(select0, /*$fragmentState*/ ctx[9].direction);
     			insert_dev(target, t4, anchor);
     			insert_dev(target, label1, anchor);
@@ -1326,20 +1328,20 @@ var app = (function () {
     			append_dev(select1, option3);
     			append_dev(select1, option4);
     			append_dev(select1, option5);
-    			/*select1_binding*/ ctx[21](select1);
+    			/*select1_binding*/ ctx[22](select1);
     			select_option(select1, /*$fragmentState*/ ctx[9].support);
     			insert_dev(target, t9, anchor);
     			insert_dev(target, label2, anchor);
     			append_dev(label2, t10);
     			append_dev(label2, input);
-    			/*input_binding*/ ctx[23](input);
+    			/*input_binding*/ ctx[24](input);
     			set_input_value(input, /*$fragmentState*/ ctx[9].rotations);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[20]),
-    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[22]),
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[24])
+    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[21]),
+    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[23]),
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[25])
     				];
 
     				mounted = true;
@@ -1360,13 +1362,13 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(label0);
-    			/*select0_binding*/ ctx[19](null);
+    			/*select0_binding*/ ctx[20](null);
     			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(label1);
-    			/*select1_binding*/ ctx[21](null);
+    			/*select1_binding*/ ctx[22](null);
     			if (detaching) detach_dev(t9);
     			if (detaching) detach_dev(label2);
-    			/*input_binding*/ ctx[23](null);
+    			/*input_binding*/ ctx[24](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -1376,14 +1378,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(227:12) {#if $fragmentState.type === \\\"pair acrobatics\\\"}",
+    		source: "(193:12) {#if $fragmentState.type === \\\"pair acrobatics\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (251:12) {#if $fragmentState.type === "hybrid"}
+    // (217:12) {#if $fragmentState.type === "hybrid"}
     function create_if_block(ctx) {
     	let label0;
     	let t0;
@@ -1432,40 +1434,40 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$2, 254, 24, 11824);
+    			add_location(option0, file$2, 220, 24, 9686);
     			option1.__value = "<6";
     			option1.value = option1.__value;
-    			add_location(option1, file$2, 255, 24, 11911);
+    			add_location(option1, file$2, 221, 24, 9773);
     			option2.__value = "6-20";
     			option2.value = option2.__value;
-    			add_location(option2, file$2, 256, 24, 11970);
+    			add_location(option2, file$2, 222, 24, 9832);
     			option3.__value = "21-30";
     			option3.value = option3.__value;
-    			add_location(option3, file$2, 257, 24, 12030);
+    			add_location(option3, file$2, 223, 24, 9892);
     			option4.__value = ">30";
     			option4.value = option4.__value;
-    			add_location(option4, file$2, 258, 24, 12092);
+    			add_location(option4, file$2, 224, 24, 9954);
     			select0.required = true;
     			attr_dev(select0, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[9].numberOfMovements === void 0) add_render_callback(() => /*select0_change_handler_1*/ ctx[26].call(select0));
-    			add_location(select0, file$2, 252, 20, 11657);
-    			add_location(label0, file$2, 251, 16, 11609);
+    			if (/*$fragmentState*/ ctx[9].numberOfMovements === void 0) add_render_callback(() => /*select0_change_handler_1*/ ctx[27].call(select0));
+    			add_location(select0, file$2, 218, 20, 9519);
+    			add_location(label0, file$2, 217, 16, 9471);
     			option5.selected = "selected";
     			option5.disabled = true;
     			option5.__value = "";
     			option5.value = option5.__value;
-    			add_location(option5, file$2, 263, 24, 12357);
+    			add_location(option5, file$2, 229, 24, 10219);
     			option6.__value = "1";
     			option6.value = option6.__value;
-    			add_location(option6, file$2, 264, 24, 12444);
+    			add_location(option6, file$2, 230, 24, 10306);
     			option7.__value = "2";
     			option7.value = option7.__value;
-    			add_location(option7, file$2, 265, 24, 12525);
+    			add_location(option7, file$2, 231, 24, 10387);
     			select1.required = true;
     			attr_dev(select1, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[9].legs === void 0) add_render_callback(() => /*select1_change_handler_1*/ ctx[28].call(select1));
-    			add_location(select1, file$2, 262, 20, 12237);
-    			add_location(label1, file$2, 261, 16, 12204);
+    			if (/*$fragmentState*/ ctx[9].legs === void 0) add_render_callback(() => /*select1_change_handler_1*/ ctx[29].call(select1));
+    			add_location(select1, file$2, 228, 20, 10099);
+    			add_location(label1, file$2, 227, 16, 10066);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label0, anchor);
@@ -1476,7 +1478,7 @@ var app = (function () {
     			append_dev(select0, option2);
     			append_dev(select0, option3);
     			append_dev(select0, option4);
-    			/*select0_binding_1*/ ctx[25](select0);
+    			/*select0_binding_1*/ ctx[26](select0);
     			select_option(select0, /*$fragmentState*/ ctx[9].numberOfMovements);
     			insert_dev(target, t6, anchor);
     			insert_dev(target, label1, anchor);
@@ -1485,13 +1487,13 @@ var app = (function () {
     			append_dev(select1, option5);
     			append_dev(select1, option6);
     			append_dev(select1, option7);
-    			/*select1_binding_1*/ ctx[27](select1);
+    			/*select1_binding_1*/ ctx[28](select1);
     			select_option(select1, /*$fragmentState*/ ctx[9].legs);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select0, "change", /*select0_change_handler_1*/ ctx[26]),
-    					listen_dev(select1, "change", /*select1_change_handler_1*/ ctx[28])
+    					listen_dev(select0, "change", /*select0_change_handler_1*/ ctx[27]),
+    					listen_dev(select1, "change", /*select1_change_handler_1*/ ctx[29])
     				];
 
     				mounted = true;
@@ -1508,10 +1510,10 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(label0);
-    			/*select0_binding_1*/ ctx[25](null);
+    			/*select0_binding_1*/ ctx[26](null);
     			if (detaching) detach_dev(t6);
     			if (detaching) detach_dev(label1);
-    			/*select1_binding_1*/ ctx[27](null);
+    			/*select1_binding_1*/ ctx[28](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -1521,14 +1523,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(251:12) {#if $fragmentState.type === \\\"hybrid\\\"}",
+    		source: "(217:12) {#if $fragmentState.type === \\\"hybrid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (288:12) {:else}
+    // (254:12) {:else}
     function create_else_block(ctx) {
     	let div;
 
@@ -1536,7 +1538,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Additional movements will be here.\r\n                ";
-    			add_location(div, file$2, 288, 16, 13508);
+    			add_location(div, file$2, 254, 16, 11370);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1550,17 +1552,17 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(288:12) {:else}",
+    		source: "(254:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (275:20) <div slot="header" >
+    // (241:20) <div slot="header" >
     function create_header_slot(ctx) {
     	let div;
-    	let t_value = /*modifier*/ ctx[35]["category"] + "";
+    	let t_value = /*modifier*/ ctx[38]["category"] + "";
     	let t;
 
     	const block = {
@@ -1568,14 +1570,14 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "header");
-    			add_location(div, file$2, 274, 20, 12925);
+    			add_location(div, file$2, 240, 20, 10787);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*$fragmentState*/ 512 && t_value !== (t_value = /*modifier*/ ctx[35]["category"] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*$fragmentState*/ 512 && t_value !== (t_value = /*modifier*/ ctx[38]["category"] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
@@ -1586,17 +1588,17 @@ var app = (function () {
     		block,
     		id: create_header_slot.name,
     		type: "slot",
-    		source: "(275:20) <div slot=\\\"header\\\" >",
+    		source: "(241:20) <div slot=\\\"header\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (278:20) <div slot="body" >
+    // (244:20) <div slot="body" >
     function create_body_slot_1(ctx) {
     	let div;
-    	let t_value = /*modifier*/ ctx[35].name + "";
+    	let t_value = /*modifier*/ ctx[38].name + "";
     	let t;
 
     	const block = {
@@ -1604,14 +1606,14 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "body");
-    			add_location(div, file$2, 277, 20, 13043);
+    			add_location(div, file$2, 243, 20, 10905);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*$fragmentState*/ 512 && t_value !== (t_value = /*modifier*/ ctx[35].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*$fragmentState*/ 512 && t_value !== (t_value = /*modifier*/ ctx[38].name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
@@ -1622,25 +1624,25 @@ var app = (function () {
     		block,
     		id: create_body_slot_1.name,
     		type: "slot",
-    		source: "(278:20) <div slot=\\\"body\\\" >",
+    		source: "(244:20) <div slot=\\\"body\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (284:20) <div class="close-button" slot="footer" on:click={()=>removeModifier(modifier)}>
+    // (250:20) <div class="close-button" slot="footer" on:click={()=>removeModifier(modifier)}>
     function create_footer_slot_1(ctx) {
     	let div0;
     	let t0;
-    	let t1_value = /*modifier*/ ctx[35]["values"][/*$routineState*/ ctx[8].type] + "";
+    	let t1_value = /*modifier*/ ctx[38]["values"][/*$routineState*/ ctx[8].type] + "";
     	let t1;
     	let div1;
     	let mounted;
     	let dispose;
 
     	function click_handler(...args) {
-    		return /*click_handler*/ ctx[29](/*modifier*/ ctx[35], ...args);
+    		return /*click_handler*/ ctx[30](/*modifier*/ ctx[38], ...args);
     	}
 
     	const block = {
@@ -1651,10 +1653,10 @@ var app = (function () {
     			div1 = element("div");
     			div1.textContent = "×";
     			attr_dev(div0, "slot", "footer");
-    			add_location(div0, file$2, 280, 20, 13152);
+    			add_location(div0, file$2, 246, 20, 11014);
     			attr_dev(div1, "class", "close-button");
     			attr_dev(div1, "slot", "footer");
-    			add_location(div1, file$2, 283, 20, 13299);
+    			add_location(div1, file$2, 249, 20, 11161);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1669,7 +1671,7 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*$fragmentState, $routineState*/ 768 && t1_value !== (t1_value = /*modifier*/ ctx[35]["values"][/*$routineState*/ ctx[8].type] + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*$fragmentState, $routineState*/ 768 && t1_value !== (t1_value = /*modifier*/ ctx[38]["values"][/*$routineState*/ ctx[8].type] + "")) set_data_dev(t1, t1_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
@@ -1683,14 +1685,14 @@ var app = (function () {
     		block,
     		id: create_footer_slot_1.name,
     		type: "slot",
-    		source: "(284:20) <div class=\\\"close-button\\\" slot=\\\"footer\\\" on:click={()=>removeModifier(modifier)}>",
+    		source: "(250:20) <div class=\\\"close-button\\\" slot=\\\"footer\\\" on:click={()=>removeModifier(modifier)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (274:16) <Modifier>
+    // (240:16) <Modifier>
     function create_default_slot_1(ctx) {
     	let t0;
     	let t1;
@@ -1723,14 +1725,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(274:16) <Modifier>",
+    		source: "(240:16) <Modifier>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (273:12) {#each $fragmentState.modifiers as modifier}
+    // (239:12) {#each $fragmentState.modifiers as modifier}
     function create_each_block(ctx) {
     	let modifier;
     	let current;
@@ -1759,7 +1761,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const modifier_changes = {};
 
-    			if (dirty[0] & /*$fragmentState, $routineState*/ 768 | dirty[1] & /*$$scope*/ 128) {
+    			if (dirty[0] & /*$fragmentState, $routineState*/ 768 | dirty[1] & /*$$scope*/ 1024) {
     				modifier_changes.$$scope = { dirty, ctx };
     			}
 
@@ -1783,14 +1785,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(273:12) {#each $fragmentState.modifiers as modifier}",
+    		source: "(239:12) {#each $fragmentState.modifiers as modifier}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (207:4) <div slot="body" class="container">
+    // (173:4) <div slot="body" class="container">
     function create_body_slot(ctx) {
     	let div0;
     	let div2;
@@ -1884,46 +1886,46 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$2, 211, 20, 9413);
+    			add_location(option0, file$2, 177, 20, 7275);
     			option1.__value = "hybrid";
     			option1.value = option1.__value;
-    			add_location(option1, file$2, 212, 20, 9499);
+    			add_location(option1, file$2, 178, 20, 7361);
     			option2.__value = "transition";
     			option2.value = option2.__value;
-    			add_location(option2, file$2, 213, 20, 9559);
+    			add_location(option2, file$2, 179, 20, 7421);
     			select.required = true;
     			attr_dev(select, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[9].type === void 0) add_render_callback(() => /*select_change_handler*/ ctx[14].call(select));
-    			add_location(select, file$2, 209, 16, 9272);
-    			add_location(label0, file$2, 208, 12, 9243);
+    			if (/*$fragmentState*/ ctx[9].type === void 0) add_render_callback(() => /*select_change_handler*/ ctx[15].call(select));
+    			add_location(select, file$2, 175, 16, 7134);
+    			add_location(label0, file$2, 174, 12, 7105);
     			attr_dev(label1, "for", "startTime");
-    			add_location(label1, file$2, 217, 16, 9734);
+    			add_location(label1, file$2, 183, 16, 7596);
     			attr_dev(input0, "id", "startTime");
     			input0.required = true;
     			attr_dev(input0, "pattern", "[0-9]:[0-9][0-9]");
     			attr_dev(input0, "placeholder", "0:00");
     			attr_dev(input0, "class", "form-control");
-    			add_location(input0, file$2, 218, 16, 9793);
+    			add_location(input0, file$2, 184, 16, 7655);
     			attr_dev(label2, "for", "endTime");
-    			add_location(label2, file$2, 221, 16, 10022);
+    			add_location(label2, file$2, 187, 16, 7884);
     			attr_dev(input1, "id", "endTime");
     			input1.required = true;
     			attr_dev(input1, "pattern", "[0-9]:[0-9][0-9]");
     			attr_dev(input1, "placeholder", "0:00");
     			attr_dev(input1, "class", "form-control");
-    			add_location(input1, file$2, 222, 16, 10077);
+    			add_location(input1, file$2, 188, 16, 7939);
     			set_style(div1, "display", "flex");
     			set_style(div1, "flex-direction", "row");
-    			add_location(div1, file$2, 216, 12, 9668);
+    			add_location(div1, file$2, 182, 12, 7530);
     			attr_dev(button, "class", "btn btn-outline-primary svelte-1mi4i04");
-    			add_location(button, file$2, 269, 12, 12671);
+    			add_location(button, file$2, 235, 12, 10533);
     			attr_dev(div2, "class", "form");
-    			add_location(div2, file$2, 207, 8, 9211);
+    			add_location(div2, file$2, 173, 8, 7073);
     			attr_dev(div3, "class", "modifiers svelte-1mi4i04");
-    			add_location(div3, file$2, 271, 8, 12794);
+    			add_location(div3, file$2, 237, 8, 10656);
     			attr_dev(div0, "slot", "body");
     			attr_dev(div0, "class", "container svelte-1mi4i04");
-    			add_location(div0, file$2, 206, 4, 9166);
+    			add_location(div0, file$2, 172, 4, 7028);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1934,20 +1936,20 @@ var app = (function () {
     			append_dev(select, option0);
     			append_dev(select, option1);
     			append_dev(select, option2);
-    			/*select_binding*/ ctx[13](select);
+    			/*select_binding*/ ctx[14](select);
     			select_option(select, /*$fragmentState*/ ctx[9].type);
     			append_dev(div2, t4);
     			append_dev(div2, div1);
     			append_dev(div1, label1);
     			append_dev(div1, t6);
     			append_dev(div1, input0);
-    			/*input0_binding*/ ctx[15](input0);
+    			/*input0_binding*/ ctx[16](input0);
     			set_input_value(input0, /*$fragmentState*/ ctx[9].startTime);
     			append_dev(div1, t7);
     			append_dev(div1, label2);
     			append_dev(div1, t9);
     			append_dev(div1, input1);
-    			/*input1_binding*/ ctx[17](input1);
+    			/*input1_binding*/ ctx[18](input1);
     			set_input_value(input1, /*$fragmentState*/ ctx[9].endTime);
     			append_dev(div2, t10);
     			if (if_block0) if_block0.m(div2, null);
@@ -1970,9 +1972,9 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select, "change", /*select_change_handler*/ ctx[14]),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[16]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[18]),
+    					listen_dev(select, "change", /*select_change_handler*/ ctx[15]),
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[17]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[19]),
     					listen_dev(button, "click", /*addModifier*/ ctx[11], false, false, false)
     				];
 
@@ -2077,9 +2079,9 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
-    			/*select_binding*/ ctx[13](null);
-    			/*input0_binding*/ ctx[15](null);
-    			/*input1_binding*/ ctx[17](null);
+    			/*select_binding*/ ctx[14](null);
+    			/*input0_binding*/ ctx[16](null);
+    			/*input1_binding*/ ctx[18](null);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
     			destroy_each(each_blocks, detaching);
@@ -2093,14 +2095,14 @@ var app = (function () {
     		block,
     		id: create_body_slot.name,
     		type: "slot",
-    		source: "(207:4) <div slot=\\\"body\\\" class=\\\"container\\\">",
+    		source: "(173:4) <div slot=\\\"body\\\" class=\\\"container\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (295:4) <div slot="footer" class="footer">
+    // (261:4) <div slot="footer" class="footer">
     function create_footer_slot(ctx) {
     	let div;
     	let button0;
@@ -2118,12 +2120,12 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Dismiss";
     			attr_dev(button0, "class", "btn btn-primary svelte-1mi4i04");
-    			add_location(button0, file$2, 295, 8, 13692);
+    			add_location(button0, file$2, 261, 8, 11554);
     			attr_dev(button1, "class", "btn btn-danger svelte-1mi4i04");
-    			add_location(button1, file$2, 296, 8, 13773);
+    			add_location(button1, file$2, 262, 8, 11635);
     			attr_dev(div, "slot", "footer");
     			attr_dev(div, "class", "footer svelte-1mi4i04");
-    			add_location(div, file$2, 294, 4, 13648);
+    			add_location(div, file$2, 260, 4, 11510);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2134,7 +2136,7 @@ var app = (function () {
     			if (!mounted) {
     				dispose = [
     					listen_dev(button0, "click", /*saveFragment*/ ctx[10], false, false, false),
-    					listen_dev(button1, "click", hideFragmentModal, false, false, false)
+    					listen_dev(button1, "click", /*dismissFragment*/ ctx[13], false, false, false)
     				];
 
     				mounted = true;
@@ -2152,14 +2154,14 @@ var app = (function () {
     		block,
     		id: create_footer_slot.name,
     		type: "slot",
-    		source: "(295:4) <div slot=\\\"footer\\\" class=\\\"footer\\\">",
+    		source: "(261:4) <div slot=\\\"footer\\\" class=\\\"footer\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (201:0) <Modal on:close="{hideFragmentModal}" z_index=1>
+    // (167:0) <Modal on:close="{hideFragmentModal}" z_index=1>
     function create_default_slot(ctx) {
     	let t0;
     	let t1;
@@ -2186,7 +2188,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(201:0) <Modal on:close=\\\"{hideFragmentModal}\\\" z_index=1>",
+    		source: "(167:0) <Modal on:close=\\\"{hideFragmentModal}\\\" z_index=1>",
     		ctx
     	});
 
@@ -2227,7 +2229,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const modal_changes = {};
 
-    			if (dirty[0] & /*$fragmentState, $routineState, inputLegs, inputMovements, inputRotations, inputSupport, inputDirection, inputEndTime, inputStartTime, inputType*/ 1023 | dirty[1] & /*$$scope*/ 128) {
+    			if (dirty[0] & /*$fragmentState, $routineState, inputLegs, inputMovements, inputRotations, inputSupport, inputDirection, inputEndTime, inputStartTime, inputType*/ 1023 | dirty[1] & /*$$scope*/ 1024) {
     				modal_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2276,6 +2278,7 @@ var app = (function () {
     	let inputDirection;
     	let inputSupport;
     	let inputRotations;
+    	let interval;
 
     	onDestroy(() => {
     		console.log("fragment modal destroyed");
@@ -2319,12 +2322,17 @@ var app = (function () {
     		let data = await fetch("./modifiers.json").then(res => res.json());
 
     		autoModifiers = data.filter(item => {
+    			console.log(item.category);
     			return item.category === "Auto";
     		});
+
+    		console.log(data);
 
     		inputType.addEventListener("change", () => {
     			rerenderModal();
     		});
+
+    		interval = setInterval(checkAutoModifiers, 10);
     	});
 
     	let modals = modalStates.subscribe(state => {
@@ -2359,6 +2367,7 @@ var app = (function () {
     			set_store_value(routineState, $routineState.hybridsPercent = String(Math.round(hybridsPercent * 100)) + "%", $routineState);
     			set_store_value(routineState, $routineState.hybridsScore = hybridsScore.toFixed(2), $routineState);
     			set_store_value(routineState, $routineState.mark = calculateRoutineDifficulty($routineState), $routineState);
+    			clearInterval(interval);
     			hideFragmentModal();
     		}
     	};
@@ -2390,58 +2399,22 @@ var app = (function () {
     		);
     	};
 
-    	/*const checkAutoModifiers = function () {
-        if ($fragmentState.type === 'hybrid') {
-            $fragmentState.modifiers = $fragmentState.modifiers.filter(modifier=>modifier.category!=='Auto')
-            let fragment = Object.assign({}, get(fragmentState))
-            fragment.duration = (calculateFragmentDuration(fragment));
-            let hybridLevel = Number(fragment.duration) < 16 ? (Number(fragment.duration) < 10 ? 0.1 : 0.2) : 0.3;
-            let movementsLevel = $fragmentState.numberOfMovements === '<6' ? 0.1 : ($fragmentState.numberOfMovements === "6-20" ? 0.2 : ($fragmentState.numberOfMovements === '21-30' ?  0.3 : 0.4));
-            let comparsion = hybridLevel === movementsLevel ? 'equal' : movementsLevel > hybridLevel
-            console.log(`Duration: ${fragment.duration}\nMovements: ${$fragmentState.numberOfMovements}\nhybridLevel: ${hybridLevel}\nmovementsLevel: ${movementsLevel}`)
-            if (comparsion !== 'equal') {
-                let modifier;
-                if (comparsion) {
-                    if ($fragmentState.modifiers.indexOf(autoModifiers[0]) !== -1) {
-                        removeModifier(autoModifiers[0])
-                    }
-                    modifier = autoModifiers[1];
-                } else {
-                        if ($fragmentState.modifiers.indexOf(autoModifiers[1]) !== -1) {
-                            removeModifier(autoModifiers[1])
-                        }
-                        modifier = autoModifiers[0]
-                }
-                console.log($fragmentState.modifiers.indexOf(modifier))
-                if ($fragmentState.modifiers.indexOf(modifier) === -1) {
-                    console.log(modifier);
-                    $fragmentState.modifiers = [...$fragmentState.modifiers, modifier];
-                }
-            } else {
-                if(movementsLevel !== 0.4) {
-                    if ($fragmentState.modifiers.indexOf(autoModifiers[1]) !== -1) {
-                        removeModifier(autoModifiers[1])
-                    }
-                    if ($fragmentState.modifiers.indexOf(autoModifiers[0]) !== -1) {
-                        removeModifier(autoModifiers[0])
-                    }
-                }
-                if(movementsLevel === 0.4){
-                    $fragmentState.modifiers = [...$fragmentState.modifiers, autoModifiers[1]];
-                }
-            }
-            if (fragment.duration > 20) {
-                if ($fragmentState.modifiers.indexOf(autoModifiers[2]) === -1) {
-                    $fragmentState.modifiers = [...$fragmentState.modifiers, autoModifiers[2]];
-                }
-            } else {
-                if ($fragmentState.modifiers.indexOf(autoModifiers[2]) !== -1) {
-                    removeModifier(autoModifiers[2])
-                }
-            }
-        }
-    }
-    */
+    	const checkAutoModifiers = function () {
+    		if ($fragmentState.type === "hybrid") {
+    			let level = calculateHybridLevel($fragmentState);
+    			set_store_value(fragmentState, $fragmentState.modifiers = $fragmentState.modifiers.filter(modifier => modifier.category !== "Auto"), $fragmentState);
+
+    			if ($fragmentState.numberOfMovements === ">30") {
+    				set_store_value(fragmentState, $fragmentState.modifiers = [...$fragmentState.modifiers, autoModifiers[0]], $fragmentState);
+    			}
+    		}
+    	};
+
+    	const dismissFragment = function () {
+    		clearInterval(interval);
+    		hideFragmentModal();
+    	};
+
     	const rerenderModal = function () {
     		inputType.setCustomValidity("");
     		set_store_value(fragmentState, $fragmentState.duration = null, $fragmentState);
@@ -2594,10 +2567,13 @@ var app = (function () {
     		inputDirection,
     		inputSupport,
     		inputRotations,
+    		interval,
     		modals,
     		saveFragment,
     		addModifier,
     		removeModifier,
+    		checkAutoModifiers,
+    		dismissFragment,
     		rerenderModal,
     		$routineState,
     		$fragmentState
@@ -2615,6 +2591,7 @@ var app = (function () {
     		if ("inputDirection" in $$props) $$invalidate(5, inputDirection = $$props.inputDirection);
     		if ("inputSupport" in $$props) $$invalidate(6, inputSupport = $$props.inputSupport);
     		if ("inputRotations" in $$props) $$invalidate(7, inputRotations = $$props.inputRotations);
+    		if ("interval" in $$props) interval = $$props.interval;
     		if ("modals" in $$props) modals = $$props.modals;
     	};
 
@@ -2636,6 +2613,7 @@ var app = (function () {
     		saveFragment,
     		addModifier,
     		removeModifier,
+    		dismissFragment,
     		select_binding,
     		select_change_handler,
     		input0_binding,
@@ -3322,11 +3300,11 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[36] = list[i];
+    	child_ctx[39] = list[i];
     	return child_ctx;
     }
 
-    // (142:4) <div slot="header">
+    // (108:4) <div slot="header">
     function create_header_slot_1$2(ctx) {
     	let div0;
     	let div1;
@@ -3342,11 +3320,11 @@ var app = (function () {
     			h2 = element("h2");
     			t0 = text("Edit Fragment №");
     			t1 = text(t1_value);
-    			add_location(h2, file$4, 143, 12, 6704);
+    			add_location(h2, file$4, 109, 12, 4521);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$4, 142, 8, 6673);
+    			add_location(div1, file$4, 108, 8, 4490);
     			attr_dev(div0, "slot", "header");
-    			add_location(div0, file$4, 141, 4, 6644);
+    			add_location(div0, file$4, 107, 4, 4461);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -3367,14 +3345,14 @@ var app = (function () {
     		block,
     		id: create_header_slot_1$2.name,
     		type: "slot",
-    		source: "(142:4) <div slot=\\\"header\\\">",
+    		source: "(108:4) <div slot=\\\"header\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (166:12) {#if $fragmentState.type === "pair acrobatics"}
+    // (132:12) {#if $fragmentState.type === "pair acrobatics"}
     function create_if_block_1$1(ctx) {
     	let label0;
     	let t0;
@@ -3428,39 +3406,39 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$4, 169, 24, 8106);
+    			add_location(option0, file$4, 135, 24, 5923);
     			option1.__value = option1_value_value = 0.1;
     			option1.value = option1.__value;
-    			add_location(option1, file$4, 170, 24, 8173);
+    			add_location(option1, file$4, 136, 24, 5990);
     			option2.__value = option2_value_value = 0.2;
     			option2.value = option2.__value;
-    			add_location(option2, file$4, 171, 24, 8238);
+    			add_location(option2, file$4, 137, 24, 6055);
     			select0.required = true;
     			attr_dev(select0, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[10].direction === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[22].call(select0));
-    			add_location(select0, file$4, 167, 20, 7947);
-    			add_location(label0, file$4, 166, 16, 7909);
+    			if (/*$fragmentState*/ ctx[10].direction === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[23].call(select0));
+    			add_location(select0, file$4, 133, 20, 5764);
+    			add_location(label0, file$4, 132, 16, 5726);
     			option3.disabled = true;
     			option3.__value = "";
     			option3.value = option3.__value;
-    			add_location(option3, file$4, 177, 24, 8520);
+    			add_location(option3, file$4, 143, 24, 6337);
     			option4.__value = option4_value_value = 0;
     			option4.value = option4.__value;
-    			add_location(option4, file$4, 178, 24, 8587);
+    			add_location(option4, file$4, 144, 24, 6404);
     			option5.__value = option5_value_value = 0.1;
     			option5.value = option5.__value;
-    			add_location(option5, file$4, 179, 24, 8646);
+    			add_location(option5, file$4, 145, 24, 6463);
     			select1.required = true;
     			attr_dev(select1, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[10].support === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[24].call(select1));
-    			add_location(select1, file$4, 176, 20, 8394);
-    			add_location(label1, file$4, 175, 16, 8353);
+    			if (/*$fragmentState*/ ctx[10].support === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[25].call(select1));
+    			add_location(select1, file$4, 142, 20, 6211);
+    			add_location(label1, file$4, 141, 16, 6170);
     			input.required = true;
     			attr_dev(input, "type", "number");
     			attr_dev(input, "min", "0");
     			attr_dev(input, "class", "form-control");
-    			add_location(input, file$4, 184, 20, 8802);
-    			add_location(label2, file$4, 183, 16, 8759);
+    			add_location(input, file$4, 150, 20, 6619);
+    			add_location(label2, file$4, 149, 16, 6576);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label0, anchor);
@@ -3469,7 +3447,7 @@ var app = (function () {
     			append_dev(select0, option0);
     			append_dev(select0, option1);
     			append_dev(select0, option2);
-    			/*select0_binding*/ ctx[21](select0);
+    			/*select0_binding*/ ctx[22](select0);
     			select_option(select0, /*$fragmentState*/ ctx[10].direction);
     			insert_dev(target, t4, anchor);
     			insert_dev(target, label1, anchor);
@@ -3478,20 +3456,20 @@ var app = (function () {
     			append_dev(select1, option3);
     			append_dev(select1, option4);
     			append_dev(select1, option5);
-    			/*select1_binding*/ ctx[23](select1);
+    			/*select1_binding*/ ctx[24](select1);
     			select_option(select1, /*$fragmentState*/ ctx[10].support);
     			insert_dev(target, t9, anchor);
     			insert_dev(target, label2, anchor);
     			append_dev(label2, t10);
     			append_dev(label2, input);
-    			/*input_binding*/ ctx[25](input);
+    			/*input_binding*/ ctx[26](input);
     			set_input_value(input, /*$fragmentState*/ ctx[10].rotations);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[22]),
-    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[24]),
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[26])
+    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[23]),
+    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[25]),
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[27])
     				];
 
     				mounted = true;
@@ -3512,13 +3490,13 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(label0);
-    			/*select0_binding*/ ctx[21](null);
+    			/*select0_binding*/ ctx[22](null);
     			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(label1);
-    			/*select1_binding*/ ctx[23](null);
+    			/*select1_binding*/ ctx[24](null);
     			if (detaching) detach_dev(t9);
     			if (detaching) detach_dev(label2);
-    			/*input_binding*/ ctx[25](null);
+    			/*input_binding*/ ctx[26](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -3528,14 +3506,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(166:12) {#if $fragmentState.type === \\\"pair acrobatics\\\"}",
+    		source: "(132:12) {#if $fragmentState.type === \\\"pair acrobatics\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (190:12) {#if $fragmentState.type === "hybrid"}
+    // (156:12) {#if $fragmentState.type === "hybrid"}
     function create_if_block$1(ctx) {
     	let label0;
     	let t0;
@@ -3584,39 +3562,39 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$4, 193, 24, 9312);
+    			add_location(option0, file$4, 159, 24, 7129);
     			option1.__value = "<6";
     			option1.value = option1.__value;
-    			add_location(option1, file$4, 194, 24, 9388);
+    			add_location(option1, file$4, 160, 24, 7205);
     			option2.__value = "6-20";
     			option2.value = option2.__value;
-    			add_location(option2, file$4, 195, 24, 9447);
+    			add_location(option2, file$4, 161, 24, 7264);
     			option3.__value = "21-30";
     			option3.value = option3.__value;
-    			add_location(option3, file$4, 196, 24, 9507);
+    			add_location(option3, file$4, 162, 24, 7324);
     			option4.__value = ">30";
     			option4.value = option4.__value;
-    			add_location(option4, file$4, 197, 24, 9569);
+    			add_location(option4, file$4, 163, 24, 7386);
     			select0.required = true;
     			attr_dev(select0, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[10].numberOfMovements === void 0) add_render_callback(() => /*select0_change_handler_1*/ ctx[28].call(select0));
-    			add_location(select0, file$4, 191, 20, 9145);
-    			add_location(label0, file$4, 190, 16, 9097);
+    			if (/*$fragmentState*/ ctx[10].numberOfMovements === void 0) add_render_callback(() => /*select0_change_handler_1*/ ctx[29].call(select0));
+    			add_location(select0, file$4, 157, 20, 6962);
+    			add_location(label0, file$4, 156, 16, 6914);
     			option5.disabled = true;
     			option5.__value = "";
     			option5.value = option5.__value;
-    			add_location(option5, file$4, 202, 24, 9834);
+    			add_location(option5, file$4, 168, 24, 7651);
     			option6.__value = "1";
     			option6.value = option6.__value;
-    			add_location(option6, file$4, 203, 24, 9901);
+    			add_location(option6, file$4, 169, 24, 7718);
     			option7.__value = "2";
     			option7.value = option7.__value;
-    			add_location(option7, file$4, 204, 24, 9982);
+    			add_location(option7, file$4, 170, 24, 7799);
     			select1.required = true;
     			attr_dev(select1, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[10].legs === void 0) add_render_callback(() => /*select1_change_handler_1*/ ctx[30].call(select1));
-    			add_location(select1, file$4, 201, 20, 9714);
-    			add_location(label1, file$4, 200, 16, 9681);
+    			if (/*$fragmentState*/ ctx[10].legs === void 0) add_render_callback(() => /*select1_change_handler_1*/ ctx[31].call(select1));
+    			add_location(select1, file$4, 167, 20, 7531);
+    			add_location(label1, file$4, 166, 16, 7498);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label0, anchor);
@@ -3627,7 +3605,7 @@ var app = (function () {
     			append_dev(select0, option2);
     			append_dev(select0, option3);
     			append_dev(select0, option4);
-    			/*select0_binding_1*/ ctx[27](select0);
+    			/*select0_binding_1*/ ctx[28](select0);
     			select_option(select0, /*$fragmentState*/ ctx[10].numberOfMovements);
     			insert_dev(target, t6, anchor);
     			insert_dev(target, label1, anchor);
@@ -3636,13 +3614,13 @@ var app = (function () {
     			append_dev(select1, option5);
     			append_dev(select1, option6);
     			append_dev(select1, option7);
-    			/*select1_binding_1*/ ctx[29](select1);
+    			/*select1_binding_1*/ ctx[30](select1);
     			select_option(select1, /*$fragmentState*/ ctx[10].legs);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select0, "change", /*select0_change_handler_1*/ ctx[28]),
-    					listen_dev(select1, "change", /*select1_change_handler_1*/ ctx[30])
+    					listen_dev(select0, "change", /*select0_change_handler_1*/ ctx[29]),
+    					listen_dev(select1, "change", /*select1_change_handler_1*/ ctx[31])
     				];
 
     				mounted = true;
@@ -3659,10 +3637,10 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(label0);
-    			/*select0_binding_1*/ ctx[27](null);
+    			/*select0_binding_1*/ ctx[28](null);
     			if (detaching) detach_dev(t6);
     			if (detaching) detach_dev(label1);
-    			/*select1_binding_1*/ ctx[29](null);
+    			/*select1_binding_1*/ ctx[30](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -3672,14 +3650,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(190:12) {#if $fragmentState.type === \\\"hybrid\\\"}",
+    		source: "(156:12) {#if $fragmentState.type === \\\"hybrid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (227:12) {:else}
+    // (193:12) {:else}
     function create_else_block$2(ctx) {
     	let div;
 
@@ -3687,7 +3665,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Additional movements will be here.\r\n                ";
-    			add_location(div, file$4, 227, 16, 10958);
+    			add_location(div, file$4, 193, 16, 8775);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3701,17 +3679,17 @@ var app = (function () {
     		block,
     		id: create_else_block$2.name,
     		type: "else",
-    		source: "(227:12) {:else}",
+    		source: "(193:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (214:20) <div slot="header">
+    // (180:20) <div slot="header">
     function create_header_slot$2(ctx) {
     	let div;
-    	let t_value = /*modifier*/ ctx[36]["category"] + "";
+    	let t_value = /*modifier*/ ctx[39]["category"] + "";
     	let t;
 
     	const block = {
@@ -3719,14 +3697,14 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "header");
-    			add_location(div, file$4, 213, 20, 10382);
+    			add_location(div, file$4, 179, 20, 8199);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*$fragmentState*/ 1024 && t_value !== (t_value = /*modifier*/ ctx[36]["category"] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*$fragmentState*/ 1024 && t_value !== (t_value = /*modifier*/ ctx[39]["category"] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
@@ -3737,17 +3715,17 @@ var app = (function () {
     		block,
     		id: create_header_slot$2.name,
     		type: "slot",
-    		source: "(214:20) <div slot=\\\"header\\\">",
+    		source: "(180:20) <div slot=\\\"header\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (217:20) <div slot="body">
+    // (183:20) <div slot="body">
     function create_body_slot_1$2(ctx) {
     	let div;
-    	let t_value = /*modifier*/ ctx[36].name + "";
+    	let t_value = /*modifier*/ ctx[39].name + "";
     	let t;
 
     	const block = {
@@ -3755,14 +3733,14 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "body");
-    			add_location(div, file$4, 216, 20, 10499);
+    			add_location(div, file$4, 182, 20, 8316);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*$fragmentState*/ 1024 && t_value !== (t_value = /*modifier*/ ctx[36].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*$fragmentState*/ 1024 && t_value !== (t_value = /*modifier*/ ctx[39].name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
@@ -3773,25 +3751,25 @@ var app = (function () {
     		block,
     		id: create_body_slot_1$2.name,
     		type: "slot",
-    		source: "(217:20) <div slot=\\\"body\\\">",
+    		source: "(183:20) <div slot=\\\"body\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (223:20) <div class="close-button" slot="footer" on:click={()=>removeModifier(modifier)}>
+    // (189:20) <div class="close-button" slot="footer" on:click={()=>removeModifier(modifier)}>
     function create_footer_slot_1$2(ctx) {
     	let div0;
     	let t0;
-    	let t1_value = /*modifier*/ ctx[36]["values"][/*$routineState*/ ctx[9].type] + "";
+    	let t1_value = /*modifier*/ ctx[39]["values"][/*$routineState*/ ctx[9].type] + "";
     	let t1;
     	let div1;
     	let mounted;
     	let dispose;
 
     	function click_handler(...args) {
-    		return /*click_handler*/ ctx[31](/*modifier*/ ctx[36], ...args);
+    		return /*click_handler*/ ctx[32](/*modifier*/ ctx[39], ...args);
     	}
 
     	const block = {
@@ -3802,10 +3780,10 @@ var app = (function () {
     			div1 = element("div");
     			div1.textContent = "×";
     			attr_dev(div0, "slot", "footer");
-    			add_location(div0, file$4, 219, 20, 10607);
+    			add_location(div0, file$4, 185, 20, 8424);
     			attr_dev(div1, "class", "close-button");
     			attr_dev(div1, "slot", "footer");
-    			add_location(div1, file$4, 222, 20, 10749);
+    			add_location(div1, file$4, 188, 20, 8566);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -3820,7 +3798,7 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*$fragmentState, $routineState*/ 1536 && t1_value !== (t1_value = /*modifier*/ ctx[36]["values"][/*$routineState*/ ctx[9].type] + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*$fragmentState, $routineState*/ 1536 && t1_value !== (t1_value = /*modifier*/ ctx[39]["values"][/*$routineState*/ ctx[9].type] + "")) set_data_dev(t1, t1_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
@@ -3834,14 +3812,14 @@ var app = (function () {
     		block,
     		id: create_footer_slot_1$2.name,
     		type: "slot",
-    		source: "(223:20) <div class=\\\"close-button\\\" slot=\\\"footer\\\" on:click={()=>removeModifier(modifier)}>",
+    		source: "(189:20) <div class=\\\"close-button\\\" slot=\\\"footer\\\" on:click={()=>removeModifier(modifier)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (213:16) <Modifier>
+    // (179:16) <Modifier>
     function create_default_slot_1$2(ctx) {
     	let t0;
     	let t1;
@@ -3874,14 +3852,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(213:16) <Modifier>",
+    		source: "(179:16) <Modifier>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (212:12) {#each $fragmentState.modifiers as modifier}
+    // (178:12) {#each $fragmentState.modifiers as modifier}
     function create_each_block$2(ctx) {
     	let modifier;
     	let current;
@@ -3910,7 +3888,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const modifier_changes = {};
 
-    			if (dirty[0] & /*$fragmentState, $routineState*/ 1536 | dirty[1] & /*$$scope*/ 256) {
+    			if (dirty[0] & /*$fragmentState, $routineState*/ 1536 | dirty[1] & /*$$scope*/ 2048) {
     				modifier_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3934,14 +3912,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(212:12) {#each $fragmentState.modifiers as modifier}",
+    		source: "(178:12) {#each $fragmentState.modifiers as modifier}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (147:4) <div slot="body" class="container">
+    // (113:4) <div slot="body" class="container">
     function create_body_slot$2(ctx) {
     	let div0;
     	let div2;
@@ -4030,44 +4008,44 @@ var app = (function () {
 
     			option0.__value = "hybrid";
     			option0.value = option0.__value;
-    			add_location(option0, file$4, 151, 20, 7027);
+    			add_location(option0, file$4, 117, 20, 4844);
     			option1.__value = "transition";
     			option1.value = option1.__value;
-    			add_location(option1, file$4, 152, 20, 7087);
+    			add_location(option1, file$4, 118, 20, 4904);
     			select.disabled = true;
     			select.required = true;
     			attr_dev(select, "class", "custom-select");
-    			if (/*$fragmentState*/ ctx[10].type === void 0) add_render_callback(() => /*select_change_handler*/ ctx[16].call(select));
-    			add_location(select, file$4, 149, 16, 6877);
-    			add_location(label0, file$4, 148, 12, 6848);
+    			if (/*$fragmentState*/ ctx[10].type === void 0) add_render_callback(() => /*select_change_handler*/ ctx[17].call(select));
+    			add_location(select, file$4, 115, 16, 4694);
+    			add_location(label0, file$4, 114, 12, 4665);
     			attr_dev(label1, "for", "startTime");
-    			add_location(label1, file$4, 156, 16, 7262);
+    			add_location(label1, file$4, 122, 16, 5079);
     			attr_dev(input0, "id", "startTime");
     			input0.required = true;
     			attr_dev(input0, "pattern", "[0-9]:[0-9][0-9]");
     			attr_dev(input0, "placeholder", "0:00");
     			attr_dev(input0, "class", "form-control");
-    			add_location(input0, file$4, 157, 16, 7321);
+    			add_location(input0, file$4, 123, 16, 5138);
     			attr_dev(label2, "for", "endTime");
-    			add_location(label2, file$4, 160, 16, 7550);
+    			add_location(label2, file$4, 126, 16, 5367);
     			attr_dev(input1, "id", "endTime");
     			input1.required = true;
     			attr_dev(input1, "pattern", "[0-9]:[0-9][0-9]");
     			attr_dev(input1, "placeholder", "0:00");
     			attr_dev(input1, "class", "form-control");
-    			add_location(input1, file$4, 161, 16, 7605);
+    			add_location(input1, file$4, 127, 16, 5422);
     			set_style(div1, "display", "flex");
     			set_style(div1, "flex-direction", "row");
-    			add_location(div1, file$4, 155, 12, 7196);
+    			add_location(div1, file$4, 121, 12, 5013);
     			attr_dev(button, "class", "btn btn-outline-primary svelte-1o5e5c");
-    			add_location(button, file$4, 208, 12, 10128);
+    			add_location(button, file$4, 174, 12, 7945);
     			attr_dev(div2, "class", "form");
-    			add_location(div2, file$4, 147, 8, 6816);
+    			add_location(div2, file$4, 113, 8, 4633);
     			attr_dev(div3, "class", "modifiers svelte-1o5e5c");
-    			add_location(div3, file$4, 210, 8, 10251);
+    			add_location(div3, file$4, 176, 8, 8068);
     			attr_dev(div0, "slot", "body");
     			attr_dev(div0, "class", "container svelte-1o5e5c");
-    			add_location(div0, file$4, 146, 4, 6771);
+    			add_location(div0, file$4, 112, 4, 4588);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -4077,20 +4055,20 @@ var app = (function () {
     			append_dev(label0, select);
     			append_dev(select, option0);
     			append_dev(select, option1);
-    			/*select_binding*/ ctx[15](select);
+    			/*select_binding*/ ctx[16](select);
     			select_option(select, /*$fragmentState*/ ctx[10].type);
     			append_dev(div2, t3);
     			append_dev(div2, div1);
     			append_dev(div1, label1);
     			append_dev(div1, t5);
     			append_dev(div1, input0);
-    			/*input0_binding*/ ctx[17](input0);
+    			/*input0_binding*/ ctx[18](input0);
     			set_input_value(input0, /*$fragmentState*/ ctx[10].startTime);
     			append_dev(div1, t6);
     			append_dev(div1, label2);
     			append_dev(div1, t8);
     			append_dev(div1, input1);
-    			/*input1_binding*/ ctx[19](input1);
+    			/*input1_binding*/ ctx[20](input1);
     			set_input_value(input1, /*$fragmentState*/ ctx[10].endTime);
     			append_dev(div2, t9);
     			if (if_block0) if_block0.m(div2, null);
@@ -4113,9 +4091,9 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select, "change", /*select_change_handler*/ ctx[16]),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[18]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[20]),
+    					listen_dev(select, "change", /*select_change_handler*/ ctx[17]),
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[19]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[21]),
     					listen_dev(button, "click", /*addModifier*/ ctx[12], false, false, false)
     				];
 
@@ -4220,9 +4198,9 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
-    			/*select_binding*/ ctx[15](null);
-    			/*input0_binding*/ ctx[17](null);
-    			/*input1_binding*/ ctx[19](null);
+    			/*select_binding*/ ctx[16](null);
+    			/*input0_binding*/ ctx[18](null);
+    			/*input1_binding*/ ctx[20](null);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
     			destroy_each(each_blocks, detaching);
@@ -4236,14 +4214,14 @@ var app = (function () {
     		block,
     		id: create_body_slot$2.name,
     		type: "slot",
-    		source: "(147:4) <div slot=\\\"body\\\" class=\\\"container\\\">",
+    		source: "(113:4) <div slot=\\\"body\\\" class=\\\"container\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (234:4) <div slot="footer" class="footer">
+    // (200:4) <div slot="footer" class="footer">
     function create_footer_slot$2(ctx) {
     	let div;
     	let button0;
@@ -4261,12 +4239,12 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Dismiss";
     			attr_dev(button0, "class", "btn btn-primary svelte-1o5e5c");
-    			add_location(button0, file$4, 234, 8, 11142);
+    			add_location(button0, file$4, 200, 8, 8959);
     			attr_dev(button1, "class", "btn btn-danger svelte-1o5e5c");
-    			add_location(button1, file$4, 235, 8, 11226);
+    			add_location(button1, file$4, 201, 8, 9043);
     			attr_dev(div, "slot", "footer");
     			attr_dev(div, "class", "footer svelte-1o5e5c");
-    			add_location(div, file$4, 233, 4, 11098);
+    			add_location(div, file$4, 199, 4, 8915);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4277,7 +4255,7 @@ var app = (function () {
     			if (!mounted) {
     				dispose = [
     					listen_dev(button0, "click", /*saveFragment*/ ctx[11], false, false, false),
-    					listen_dev(button1, "click", hideEditFragmentModal, false, false, false)
+    					listen_dev(button1, "click", /*dismissFragment*/ ctx[14], false, false, false)
     				];
 
     				mounted = true;
@@ -4295,14 +4273,14 @@ var app = (function () {
     		block,
     		id: create_footer_slot$2.name,
     		type: "slot",
-    		source: "(234:4) <div slot=\\\"footer\\\" class=\\\"footer\\\">",
+    		source: "(200:4) <div slot=\\\"footer\\\" class=\\\"footer\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (141:0) <Modal on:close="{hideEditFragmentModal}" z_index=1>
+    // (107:0) <Modal on:close="{hideEditFragmentModal}" z_index=1>
     function create_default_slot$2(ctx) {
     	let t0;
     	let t1;
@@ -4329,7 +4307,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(141:0) <Modal on:close=\\\"{hideEditFragmentModal}\\\" z_index=1>",
+    		source: "(107:0) <Modal on:close=\\\"{hideEditFragmentModal}\\\" z_index=1>",
     		ctx
     	});
 
@@ -4370,7 +4348,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const modal_changes = {};
 
-    			if (dirty[0] & /*$fragmentState, $routineState, inputLegs, inputMovements, inputRotations, inputSupport, inputDirection, inputEndTime, inputStartTime, inputType, index*/ 2047 | dirty[1] & /*$$scope*/ 256) {
+    			if (dirty[0] & /*$fragmentState, $routineState, inputLegs, inputMovements, inputRotations, inputSupport, inputDirection, inputEndTime, inputStartTime, inputType, index*/ 2047 | dirty[1] & /*$$scope*/ 2048) {
     				modal_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4419,6 +4397,7 @@ var app = (function () {
     	let inputDirection;
     	let inputSupport;
     	let inputRotations;
+    	let interval;
     	let { fragment = {} } = $$props;
     	let { index } = $$props;
     	fragmentState.set(fragment);
@@ -4429,6 +4408,8 @@ var app = (function () {
     		autoModifiers = data.filter(item => {
     			return item.category === "Auto" && item.type === fragment.type;
     		});
+
+    		interval = setInterval(checkAutoModifiers, 10);
     	});
 
     	let modals = modalStates.subscribe(state => {
@@ -4466,6 +4447,7 @@ var app = (function () {
     		set_store_value(routineState, $routineState.hybridsPercent = String(Math.round(hybridsPercent * 100)) + "%", $routineState);
     		set_store_value(routineState, $routineState.hybridsScore = hybridsScore.toFixed(2), $routineState);
     		set_store_value(routineState, $routineState.mark = calculateRoutineDifficulty($routineState), $routineState);
+    		clearInterval(interval);
     		hideEditFragmentModal();
     	};
 
@@ -4475,58 +4457,17 @@ var app = (function () {
     		}
     	};
 
-    	/*const checkAutoModifiers = function () {
-        if ($fragmentState.type === 'hybrid') {
-            $fragmentState.modifiers = $fragmentState.modifiers.filter(modifier=>modifier.category!=='Auto')
-            let fragment = Object.assign({}, get(fragmentState))
-            fragment.duration = (calculateFragmentDuration(fragment));
-            let hybridLevel = Number(fragment.duration) < 16 ? (Number(fragment.duration) < 10 ? 0.1 : 0.2) : 0.3;
-            let movementsLevel = $fragmentState.numberOfMovements === '<6' ? 0.1 : ($fragmentState.numberOfMovements === "6-20" ? 0.2 : ($fragmentState.numberOfMovements === '21-30' ?  0.3 : 0.4));
-            let comparsion = hybridLevel === movementsLevel ? 'equal' : movementsLevel > hybridLevel
-            console.log(`Duration: ${fragment.duration}\nMovements: ${$fragmentState.numberOfMovements}\nhybridLevel: ${hybridLevel}\nmovementsLevel: ${movementsLevel}`)
-            if (comparsion !== 'equal') {
-                let modifier;
-                if (comparsion) {
-                    if ($fragmentState.modifiers.indexOf(autoModifiers[0]) !== -1) {
-                        removeModifier(autoModifiers[0])
-                    }
-                    modifier = autoModifiers[1];
-                } else {
-                    if ($fragmentState.modifiers.indexOf(autoModifiers[1]) !== -1) {
-                        removeModifier(autoModifiers[1])
-                    }
-                    modifier = autoModifiers[0]
-                }
-                console.log($fragmentState.modifiers.indexOf(modifier))
-                if ($fragmentState.modifiers.indexOf(modifier) === -1) {
-                    console.log(modifier);
-                    $fragmentState.modifiers = [...$fragmentState.modifiers, modifier];
-                }
-            } else {
-                if(movementsLevel !== 0.4) {
-                    if ($fragmentState.modifiers.indexOf(autoModifiers[1]) !== -1) {
-                        removeModifier(autoModifiers[1])
-                    }
-                    if ($fragmentState.modifiers.indexOf(autoModifiers[0]) !== -1) {
-                        removeModifier(autoModifiers[0])
-                    }
-                }
-                if(movementsLevel === 0.4){
-                    $fragmentState.modifiers = [...$fragmentState.modifiers, autoModifiers[1]];
-                }
-            }
-            if (fragment.duration > 20) {
-                if ($fragmentState.modifiers.indexOf(autoModifiers[2]) === -1) {
-                    $fragmentState.modifiers = [...$fragmentState.modifiers, autoModifiers[2]];
-                }
-            } else {
-                if ($fragmentState.modifiers.indexOf(autoModifiers[2]) !== -1) {
-                    removeModifier(autoModifiers[2])
-                }
-            }
-        }
-    }
-    */
+    	const checkAutoModifiers = function () {
+    		if ($fragmentState.type === "hybrid") {
+    			let level = calculateHybridLevel($fragmentState);
+    			set_store_value(fragmentState, $fragmentState.modifiers = $fragmentState.modifiers.filter(modifier => modifier.category !== "Auto"), $fragmentState);
+
+    			if ($fragmentState.numberOfMovements === ">30") {
+    				set_store_value(fragmentState, $fragmentState.modifiers = [...$fragmentState.modifiers, autoModifiers[0]], $fragmentState);
+    			}
+    		}
+    	};
+
     	const removeModifier = function (modifier) {
     		let index = $fragmentState.modifiers.findIndex(el => el === modifier);
 
@@ -4538,6 +4479,11 @@ var app = (function () {
     			],
     			$fragmentState
     		);
+    	};
+
+    	const dismissFragment = function () {
+    		clearInterval(interval);
+    		hideEditFragmentModal();
     	};
 
     	const writable_props = ["fragment", "index"];
@@ -4648,7 +4594,7 @@ var app = (function () {
     	const click_handler = modifier => removeModifier(modifier);
 
     	$$self.$set = $$props => {
-    		if ("fragment" in $$props) $$invalidate(14, fragment = $$props.fragment);
+    		if ("fragment" in $$props) $$invalidate(15, fragment = $$props.fragment);
     		if ("index" in $$props) $$invalidate(0, index = $$props.index);
     	};
 
@@ -4683,12 +4629,15 @@ var app = (function () {
     		inputDirection,
     		inputSupport,
     		inputRotations,
+    		interval,
     		fragment,
     		index,
     		modals,
     		saveFragment,
     		addModifier,
+    		checkAutoModifiers,
     		removeModifier,
+    		dismissFragment,
     		$routineState,
     		$fragmentState
     	});
@@ -4705,7 +4654,8 @@ var app = (function () {
     		if ("inputDirection" in $$props) $$invalidate(6, inputDirection = $$props.inputDirection);
     		if ("inputSupport" in $$props) $$invalidate(7, inputSupport = $$props.inputSupport);
     		if ("inputRotations" in $$props) $$invalidate(8, inputRotations = $$props.inputRotations);
-    		if ("fragment" in $$props) $$invalidate(14, fragment = $$props.fragment);
+    		if ("interval" in $$props) interval = $$props.interval;
+    		if ("fragment" in $$props) $$invalidate(15, fragment = $$props.fragment);
     		if ("index" in $$props) $$invalidate(0, index = $$props.index);
     		if ("modals" in $$props) modals = $$props.modals;
     	};
@@ -4729,6 +4679,7 @@ var app = (function () {
     		saveFragment,
     		addModifier,
     		removeModifier,
+    		dismissFragment,
     		fragment,
     		select_binding,
     		select_change_handler,
@@ -4753,7 +4704,7 @@ var app = (function () {
     class EditFragmentModal extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { fragment: 14, index: 0 }, [-1, -1]);
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { fragment: 15, index: 0 }, [-1, -1]);
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -7939,7 +7890,7 @@ var app = (function () {
     			t1 = space();
     			div2 = element("div");
     			div1 = element("div");
-    			div1.textContent = "v. 0.5.4";
+    			div1.textContent = "v. 0.5.5";
     			t3 = space();
     			create_component(main.$$.fragment);
     			t4 = space();
