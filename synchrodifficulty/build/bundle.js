@@ -599,30 +599,40 @@ var app = (function () {
         }
     };
 
-    const calculateFragmentBasicMark = function(fragment){
-        if(fragment.type === 'transition'){
+    const calculateFragmentBasicMark = function(fragment) {
+        if (fragment.type === 'transition') {
             return 0.1;
-        } else if (fragment.type === 'hybrid'){
+        } else if (fragment.type === 'hybrid') {
             let legs = fragment.legs;
-            return legs==="1"?0.2:0.3;
-        } else if (fragment.type === 'pair acrobatics'){
-            let direction = fragment.direction;
-            let rotations = fragment.rotations;
-            let support = fragment.support;
-            return Number(support+direction+rotations * 0.1).toFixed(2);
+            return legs === "1" ? 0.2 : 0.3;
         }
+    };
+
+    const excludeNonUniqueModifiers = function(fragment){
+        let modifiersArray = fragment.modifiers.filter(item=>{
+            return !item.unique
+        });
+        let uniqueModifiersArray = Array.from(new Set((fragment.modifiers.filter(item=>{
+            return item.unique && !item.multiplier
+        })).map(item=>JSON.stringify(item)))).map(item=>JSON.parse(item));
+        let multipliers = fragment.modifiers.filter(item=>{
+            return item.multiplier
+        });
+        return modifiersArray.concat(uniqueModifiersArray).concat(multipliers);
     };
 
     const calculateFragmentDifficulty = function (fragment,programType) {
         let modifiersArray = fragment.modifiers.filter(item=>{
             return !item.unique
         });
-        let uniqueModifiersArray = Array.from(new Set(fragment.modifiers.filter(item=>{
+        let uniqueModifiersArray = Array.from(new Set((fragment.modifiers.filter(item=>{
             return item.unique && !item.multiplier
-        })));
+        })).map(item=>JSON.stringify(item)))).map(item=>JSON.parse(item));
         let multipliers = fragment.modifiers.filter(item=>{
             return item.multiplier
         });
+
+        let newModifiers = modifiersArray.concat(uniqueModifiersArray).concat(multipliers);
 
         let modifiersMark = modifiersArray.reduce((accumulator,currentValue)=>{
             return accumulator+=currentValue.values[programType];
@@ -639,7 +649,7 @@ var app = (function () {
             }
         }
 
-        return Number(mark).toFixed(2)
+        return Number(mark).toFixed(2);
     };
 
     const calculateRoutineDifficulty = function (routine) {
@@ -677,8 +687,6 @@ var app = (function () {
         },0);
 
         let hybrids = program.fragments.filter((item)=>item.type === "hybrid");
-
-        console.log(hybrids);
 
         let hybridsSeconds = hybrids.reduce((accumulator,fragment)=>{
             return accumulator+=Number(fragment.duration);
@@ -1173,7 +1181,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (200:4) <div slot="header">
+    // (202:4) <div slot="header">
     function create_header_slot_1(ctx) {
     	let div0;
     	let div1;
@@ -1185,11 +1193,11 @@ var app = (function () {
     			div1 = element("div");
     			h2 = element("h2");
     			h2.textContent = "New Fragment";
-    			add_location(h2, file$2, 201, 12, 9004);
+    			add_location(h2, file$2, 203, 12, 9111);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$2, 200, 8, 8973);
+    			add_location(div1, file$2, 202, 8, 9080);
     			attr_dev(div0, "slot", "header");
-    			add_location(div0, file$2, 199, 4, 8944);
+    			add_location(div0, file$2, 201, 4, 9051);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1205,14 +1213,14 @@ var app = (function () {
     		block,
     		id: create_header_slot_1.name,
     		type: "slot",
-    		source: "(200:4) <div slot=\\\"header\\\">",
+    		source: "(202:4) <div slot=\\\"header\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (225:12) {#if $fragmentState.type === "pair acrobatics"}
+    // (227:12) {#if $fragmentState.type === "pair acrobatics"}
     function create_if_block_1(ctx) {
     	let label0;
     	let t0;
@@ -1267,40 +1275,40 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$2, 228, 24, 10471);
+    			add_location(option0, file$2, 230, 24, 10578);
     			option1.__value = option1_value_value = 0.1;
     			option1.value = option1.__value;
-    			add_location(option1, file$2, 229, 24, 10558);
+    			add_location(option1, file$2, 231, 24, 10665);
     			option2.__value = option2_value_value = 0.2;
     			option2.value = option2.__value;
-    			add_location(option2, file$2, 230, 24, 10623);
+    			add_location(option2, file$2, 232, 24, 10730);
     			select0.required = true;
     			attr_dev(select0, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[9].direction === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[20].call(select0));
-    			add_location(select0, file$2, 226, 20, 10312);
-    			add_location(label0, file$2, 225, 16, 10274);
+    			add_location(select0, file$2, 228, 20, 10419);
+    			add_location(label0, file$2, 227, 16, 10381);
     			option3.selected = "selected";
     			option3.disabled = true;
     			option3.__value = "";
     			option3.value = option3.__value;
-    			add_location(option3, file$2, 236, 24, 10905);
+    			add_location(option3, file$2, 238, 24, 11012);
     			option4.__value = option4_value_value = 0;
     			option4.value = option4.__value;
-    			add_location(option4, file$2, 237, 24, 10992);
+    			add_location(option4, file$2, 239, 24, 11099);
     			option5.__value = option5_value_value = 0.1;
     			option5.value = option5.__value;
-    			add_location(option5, file$2, 238, 24, 11051);
+    			add_location(option5, file$2, 240, 24, 11158);
     			select1.required = true;
     			attr_dev(select1, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[9].support === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[22].call(select1));
-    			add_location(select1, file$2, 235, 20, 10779);
-    			add_location(label1, file$2, 234, 16, 10738);
+    			add_location(select1, file$2, 237, 20, 10886);
+    			add_location(label1, file$2, 236, 16, 10845);
     			input.required = true;
     			attr_dev(input, "type", "number");
     			attr_dev(input, "min", "0");
     			attr_dev(input, "class", "form-control");
-    			add_location(input, file$2, 243, 20, 11207);
-    			add_location(label2, file$2, 242, 16, 11164);
+    			add_location(input, file$2, 245, 20, 11314);
+    			add_location(label2, file$2, 244, 16, 11271);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label0, anchor);
@@ -1368,14 +1376,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(225:12) {#if $fragmentState.type === \\\"pair acrobatics\\\"}",
+    		source: "(227:12) {#if $fragmentState.type === \\\"pair acrobatics\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (249:12) {#if $fragmentState.type === "hybrid"}
+    // (251:12) {#if $fragmentState.type === "hybrid"}
     function create_if_block(ctx) {
     	let label0;
     	let t0;
@@ -1424,40 +1432,40 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$2, 252, 24, 11717);
+    			add_location(option0, file$2, 254, 24, 11824);
     			option1.__value = "<6";
     			option1.value = option1.__value;
-    			add_location(option1, file$2, 253, 24, 11804);
+    			add_location(option1, file$2, 255, 24, 11911);
     			option2.__value = "6-20";
     			option2.value = option2.__value;
-    			add_location(option2, file$2, 254, 24, 11863);
+    			add_location(option2, file$2, 256, 24, 11970);
     			option3.__value = "21-30";
     			option3.value = option3.__value;
-    			add_location(option3, file$2, 255, 24, 11923);
+    			add_location(option3, file$2, 257, 24, 12030);
     			option4.__value = ">30";
     			option4.value = option4.__value;
-    			add_location(option4, file$2, 256, 24, 11985);
+    			add_location(option4, file$2, 258, 24, 12092);
     			select0.required = true;
     			attr_dev(select0, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[9].numberOfMovements === void 0) add_render_callback(() => /*select0_change_handler_1*/ ctx[26].call(select0));
-    			add_location(select0, file$2, 250, 20, 11550);
-    			add_location(label0, file$2, 249, 16, 11502);
+    			add_location(select0, file$2, 252, 20, 11657);
+    			add_location(label0, file$2, 251, 16, 11609);
     			option5.selected = "selected";
     			option5.disabled = true;
     			option5.__value = "";
     			option5.value = option5.__value;
-    			add_location(option5, file$2, 261, 24, 12250);
+    			add_location(option5, file$2, 263, 24, 12357);
     			option6.__value = "1";
     			option6.value = option6.__value;
-    			add_location(option6, file$2, 262, 24, 12337);
+    			add_location(option6, file$2, 264, 24, 12444);
     			option7.__value = "2";
     			option7.value = option7.__value;
-    			add_location(option7, file$2, 263, 24, 12418);
+    			add_location(option7, file$2, 265, 24, 12525);
     			select1.required = true;
     			attr_dev(select1, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[9].legs === void 0) add_render_callback(() => /*select1_change_handler_1*/ ctx[28].call(select1));
-    			add_location(select1, file$2, 260, 20, 12130);
-    			add_location(label1, file$2, 259, 16, 12097);
+    			add_location(select1, file$2, 262, 20, 12237);
+    			add_location(label1, file$2, 261, 16, 12204);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label0, anchor);
@@ -1513,14 +1521,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(249:12) {#if $fragmentState.type === \\\"hybrid\\\"}",
+    		source: "(251:12) {#if $fragmentState.type === \\\"hybrid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (286:12) {:else}
+    // (288:12) {:else}
     function create_else_block(ctx) {
     	let div;
 
@@ -1528,7 +1536,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Additional movements will be here.\r\n                ";
-    			add_location(div, file$2, 286, 16, 13401);
+    			add_location(div, file$2, 288, 16, 13508);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1542,14 +1550,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(286:12) {:else}",
+    		source: "(288:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (273:20) <div slot="header" >
+    // (275:20) <div slot="header" >
     function create_header_slot(ctx) {
     	let div;
     	let t_value = /*modifier*/ ctx[35]["category"] + "";
@@ -1560,7 +1568,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "header");
-    			add_location(div, file$2, 272, 20, 12818);
+    			add_location(div, file$2, 274, 20, 12925);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1578,14 +1586,14 @@ var app = (function () {
     		block,
     		id: create_header_slot.name,
     		type: "slot",
-    		source: "(273:20) <div slot=\\\"header\\\" >",
+    		source: "(275:20) <div slot=\\\"header\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (276:20) <div slot="body" >
+    // (278:20) <div slot="body" >
     function create_body_slot_1(ctx) {
     	let div;
     	let t_value = /*modifier*/ ctx[35].name + "";
@@ -1596,7 +1604,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "body");
-    			add_location(div, file$2, 275, 20, 12936);
+    			add_location(div, file$2, 277, 20, 13043);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1614,14 +1622,14 @@ var app = (function () {
     		block,
     		id: create_body_slot_1.name,
     		type: "slot",
-    		source: "(276:20) <div slot=\\\"body\\\" >",
+    		source: "(278:20) <div slot=\\\"body\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (282:20) <div class="close-button" slot="footer" on:click={()=>removeModifier(modifier)}>
+    // (284:20) <div class="close-button" slot="footer" on:click={()=>removeModifier(modifier)}>
     function create_footer_slot_1(ctx) {
     	let div0;
     	let t0;
@@ -1643,10 +1651,10 @@ var app = (function () {
     			div1 = element("div");
     			div1.textContent = "×";
     			attr_dev(div0, "slot", "footer");
-    			add_location(div0, file$2, 278, 20, 13045);
+    			add_location(div0, file$2, 280, 20, 13152);
     			attr_dev(div1, "class", "close-button");
     			attr_dev(div1, "slot", "footer");
-    			add_location(div1, file$2, 281, 20, 13192);
+    			add_location(div1, file$2, 283, 20, 13299);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1675,14 +1683,14 @@ var app = (function () {
     		block,
     		id: create_footer_slot_1.name,
     		type: "slot",
-    		source: "(282:20) <div class=\\\"close-button\\\" slot=\\\"footer\\\" on:click={()=>removeModifier(modifier)}>",
+    		source: "(284:20) <div class=\\\"close-button\\\" slot=\\\"footer\\\" on:click={()=>removeModifier(modifier)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (272:16) <Modifier>
+    // (274:16) <Modifier>
     function create_default_slot_1(ctx) {
     	let t0;
     	let t1;
@@ -1715,14 +1723,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(272:16) <Modifier>",
+    		source: "(274:16) <Modifier>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (271:12) {#each $fragmentState.modifiers as modifier}
+    // (273:12) {#each $fragmentState.modifiers as modifier}
     function create_each_block(ctx) {
     	let modifier;
     	let current;
@@ -1775,14 +1783,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(271:12) {#each $fragmentState.modifiers as modifier}",
+    		source: "(273:12) {#each $fragmentState.modifiers as modifier}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (205:4) <div slot="body" class="container">
+    // (207:4) <div slot="body" class="container">
     function create_body_slot(ctx) {
     	let div0;
     	let div2;
@@ -1876,46 +1884,46 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$2, 209, 20, 9306);
+    			add_location(option0, file$2, 211, 20, 9413);
     			option1.__value = "hybrid";
     			option1.value = option1.__value;
-    			add_location(option1, file$2, 210, 20, 9392);
+    			add_location(option1, file$2, 212, 20, 9499);
     			option2.__value = "transition";
     			option2.value = option2.__value;
-    			add_location(option2, file$2, 211, 20, 9452);
+    			add_location(option2, file$2, 213, 20, 9559);
     			select.required = true;
     			attr_dev(select, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[9].type === void 0) add_render_callback(() => /*select_change_handler*/ ctx[14].call(select));
-    			add_location(select, file$2, 207, 16, 9165);
-    			add_location(label0, file$2, 206, 12, 9136);
+    			add_location(select, file$2, 209, 16, 9272);
+    			add_location(label0, file$2, 208, 12, 9243);
     			attr_dev(label1, "for", "startTime");
-    			add_location(label1, file$2, 215, 16, 9627);
+    			add_location(label1, file$2, 217, 16, 9734);
     			attr_dev(input0, "id", "startTime");
     			input0.required = true;
     			attr_dev(input0, "pattern", "[0-9]:[0-9][0-9]");
     			attr_dev(input0, "placeholder", "0:00");
     			attr_dev(input0, "class", "form-control");
-    			add_location(input0, file$2, 216, 16, 9686);
+    			add_location(input0, file$2, 218, 16, 9793);
     			attr_dev(label2, "for", "endTime");
-    			add_location(label2, file$2, 219, 16, 9915);
+    			add_location(label2, file$2, 221, 16, 10022);
     			attr_dev(input1, "id", "endTime");
     			input1.required = true;
     			attr_dev(input1, "pattern", "[0-9]:[0-9][0-9]");
     			attr_dev(input1, "placeholder", "0:00");
     			attr_dev(input1, "class", "form-control");
-    			add_location(input1, file$2, 220, 16, 9970);
+    			add_location(input1, file$2, 222, 16, 10077);
     			set_style(div1, "display", "flex");
     			set_style(div1, "flex-direction", "row");
-    			add_location(div1, file$2, 214, 12, 9561);
+    			add_location(div1, file$2, 216, 12, 9668);
     			attr_dev(button, "class", "btn btn-outline-primary svelte-1mi4i04");
-    			add_location(button, file$2, 267, 12, 12564);
+    			add_location(button, file$2, 269, 12, 12671);
     			attr_dev(div2, "class", "form");
-    			add_location(div2, file$2, 205, 8, 9104);
+    			add_location(div2, file$2, 207, 8, 9211);
     			attr_dev(div3, "class", "modifiers svelte-1mi4i04");
-    			add_location(div3, file$2, 269, 8, 12687);
+    			add_location(div3, file$2, 271, 8, 12794);
     			attr_dev(div0, "slot", "body");
     			attr_dev(div0, "class", "container svelte-1mi4i04");
-    			add_location(div0, file$2, 204, 4, 9059);
+    			add_location(div0, file$2, 206, 4, 9166);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -2085,14 +2093,14 @@ var app = (function () {
     		block,
     		id: create_body_slot.name,
     		type: "slot",
-    		source: "(205:4) <div slot=\\\"body\\\" class=\\\"container\\\">",
+    		source: "(207:4) <div slot=\\\"body\\\" class=\\\"container\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (293:4) <div slot="footer" class="footer">
+    // (295:4) <div slot="footer" class="footer">
     function create_footer_slot(ctx) {
     	let div;
     	let button0;
@@ -2110,12 +2118,12 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Dismiss";
     			attr_dev(button0, "class", "btn btn-primary svelte-1mi4i04");
-    			add_location(button0, file$2, 293, 8, 13585);
+    			add_location(button0, file$2, 295, 8, 13692);
     			attr_dev(button1, "class", "btn btn-danger svelte-1mi4i04");
-    			add_location(button1, file$2, 294, 8, 13666);
+    			add_location(button1, file$2, 296, 8, 13773);
     			attr_dev(div, "slot", "footer");
     			attr_dev(div, "class", "footer svelte-1mi4i04");
-    			add_location(div, file$2, 292, 4, 13541);
+    			add_location(div, file$2, 294, 4, 13648);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2144,14 +2152,14 @@ var app = (function () {
     		block,
     		id: create_footer_slot.name,
     		type: "slot",
-    		source: "(293:4) <div slot=\\\"footer\\\" class=\\\"footer\\\">",
+    		source: "(295:4) <div slot=\\\"footer\\\" class=\\\"footer\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (199:0) <Modal on:close="{hideFragmentModal}" z_index=1>
+    // (201:0) <Modal on:close="{hideFragmentModal}" z_index=1>
     function create_default_slot(ctx) {
     	let t0;
     	let t1;
@@ -2178,7 +2186,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(199:0) <Modal on:close=\\\"{hideFragmentModal}\\\" z_index=1>",
+    		source: "(201:0) <Modal on:close=\\\"{hideFragmentModal}\\\" z_index=1>",
     		ctx
     	});
 
@@ -2342,6 +2350,7 @@ var app = (function () {
 
     			fragment.basicMark = calculateFragmentBasicMark(fragment);
     			fragment.difficulty = calculateFragmentDifficulty(fragment, program.type);
+    			fragment.modifiers = excludeNonUniqueModifiers(fragment);
     			set_store_value(routineState, $routineState.fragments = [...program.fragments, Object.assign({}, fragment)], $routineState);
     			set_store_value(routineState, $routineState.fragments = $routineState.fragments.sort((a, b) => a.startTime < b.startTime ? -1 : 1), $routineState);
     			set_store_value(routineState, $routineState.duration = calculateRoutineTime($routineState), $routineState);
@@ -2571,6 +2580,7 @@ var app = (function () {
     		calculateHybridLevel,
     		calculateFragmentDuration,
     		calculateHybridTime,
+    		excludeNonUniqueModifiers,
     		Modal,
     		Modifier,
     		autoModifiers,
@@ -3316,7 +3326,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (140:4) <div slot="header">
+    // (142:4) <div slot="header">
     function create_header_slot_1$2(ctx) {
     	let div0;
     	let div1;
@@ -3332,11 +3342,11 @@ var app = (function () {
     			h2 = element("h2");
     			t0 = text("Edit Fragment №");
     			t1 = text(t1_value);
-    			add_location(h2, file$4, 141, 12, 6557);
+    			add_location(h2, file$4, 143, 12, 6704);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$4, 140, 8, 6526);
+    			add_location(div1, file$4, 142, 8, 6673);
     			attr_dev(div0, "slot", "header");
-    			add_location(div0, file$4, 139, 4, 6497);
+    			add_location(div0, file$4, 141, 4, 6644);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -3357,14 +3367,14 @@ var app = (function () {
     		block,
     		id: create_header_slot_1$2.name,
     		type: "slot",
-    		source: "(140:4) <div slot=\\\"header\\\">",
+    		source: "(142:4) <div slot=\\\"header\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (164:12) {#if $fragmentState.type === "pair acrobatics"}
+    // (166:12) {#if $fragmentState.type === "pair acrobatics"}
     function create_if_block_1$1(ctx) {
     	let label0;
     	let t0;
@@ -3418,39 +3428,39 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$4, 167, 24, 7959);
+    			add_location(option0, file$4, 169, 24, 8106);
     			option1.__value = option1_value_value = 0.1;
     			option1.value = option1.__value;
-    			add_location(option1, file$4, 168, 24, 8026);
+    			add_location(option1, file$4, 170, 24, 8173);
     			option2.__value = option2_value_value = 0.2;
     			option2.value = option2.__value;
-    			add_location(option2, file$4, 169, 24, 8091);
+    			add_location(option2, file$4, 171, 24, 8238);
     			select0.required = true;
     			attr_dev(select0, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[10].direction === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[22].call(select0));
-    			add_location(select0, file$4, 165, 20, 7800);
-    			add_location(label0, file$4, 164, 16, 7762);
+    			add_location(select0, file$4, 167, 20, 7947);
+    			add_location(label0, file$4, 166, 16, 7909);
     			option3.disabled = true;
     			option3.__value = "";
     			option3.value = option3.__value;
-    			add_location(option3, file$4, 175, 24, 8373);
+    			add_location(option3, file$4, 177, 24, 8520);
     			option4.__value = option4_value_value = 0;
     			option4.value = option4.__value;
-    			add_location(option4, file$4, 176, 24, 8440);
+    			add_location(option4, file$4, 178, 24, 8587);
     			option5.__value = option5_value_value = 0.1;
     			option5.value = option5.__value;
-    			add_location(option5, file$4, 177, 24, 8499);
+    			add_location(option5, file$4, 179, 24, 8646);
     			select1.required = true;
     			attr_dev(select1, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[10].support === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[24].call(select1));
-    			add_location(select1, file$4, 174, 20, 8247);
-    			add_location(label1, file$4, 173, 16, 8206);
+    			add_location(select1, file$4, 176, 20, 8394);
+    			add_location(label1, file$4, 175, 16, 8353);
     			input.required = true;
     			attr_dev(input, "type", "number");
     			attr_dev(input, "min", "0");
     			attr_dev(input, "class", "form-control");
-    			add_location(input, file$4, 182, 20, 8655);
-    			add_location(label2, file$4, 181, 16, 8612);
+    			add_location(input, file$4, 184, 20, 8802);
+    			add_location(label2, file$4, 183, 16, 8759);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label0, anchor);
@@ -3518,14 +3528,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(164:12) {#if $fragmentState.type === \\\"pair acrobatics\\\"}",
+    		source: "(166:12) {#if $fragmentState.type === \\\"pair acrobatics\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (188:12) {#if $fragmentState.type === "hybrid"}
+    // (190:12) {#if $fragmentState.type === "hybrid"}
     function create_if_block$1(ctx) {
     	let label0;
     	let t0;
@@ -3574,39 +3584,39 @@ var app = (function () {
     			option0.disabled = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$4, 191, 24, 9165);
+    			add_location(option0, file$4, 193, 24, 9312);
     			option1.__value = "<6";
     			option1.value = option1.__value;
-    			add_location(option1, file$4, 192, 24, 9241);
+    			add_location(option1, file$4, 194, 24, 9388);
     			option2.__value = "6-20";
     			option2.value = option2.__value;
-    			add_location(option2, file$4, 193, 24, 9300);
+    			add_location(option2, file$4, 195, 24, 9447);
     			option3.__value = "21-30";
     			option3.value = option3.__value;
-    			add_location(option3, file$4, 194, 24, 9360);
+    			add_location(option3, file$4, 196, 24, 9507);
     			option4.__value = ">30";
     			option4.value = option4.__value;
-    			add_location(option4, file$4, 195, 24, 9422);
+    			add_location(option4, file$4, 197, 24, 9569);
     			select0.required = true;
     			attr_dev(select0, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[10].numberOfMovements === void 0) add_render_callback(() => /*select0_change_handler_1*/ ctx[28].call(select0));
-    			add_location(select0, file$4, 189, 20, 8998);
-    			add_location(label0, file$4, 188, 16, 8950);
+    			add_location(select0, file$4, 191, 20, 9145);
+    			add_location(label0, file$4, 190, 16, 9097);
     			option5.disabled = true;
     			option5.__value = "";
     			option5.value = option5.__value;
-    			add_location(option5, file$4, 200, 24, 9687);
+    			add_location(option5, file$4, 202, 24, 9834);
     			option6.__value = "1";
     			option6.value = option6.__value;
-    			add_location(option6, file$4, 201, 24, 9754);
+    			add_location(option6, file$4, 203, 24, 9901);
     			option7.__value = "2";
     			option7.value = option7.__value;
-    			add_location(option7, file$4, 202, 24, 9835);
+    			add_location(option7, file$4, 204, 24, 9982);
     			select1.required = true;
     			attr_dev(select1, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[10].legs === void 0) add_render_callback(() => /*select1_change_handler_1*/ ctx[30].call(select1));
-    			add_location(select1, file$4, 199, 20, 9567);
-    			add_location(label1, file$4, 198, 16, 9534);
+    			add_location(select1, file$4, 201, 20, 9714);
+    			add_location(label1, file$4, 200, 16, 9681);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label0, anchor);
@@ -3662,14 +3672,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(188:12) {#if $fragmentState.type === \\\"hybrid\\\"}",
+    		source: "(190:12) {#if $fragmentState.type === \\\"hybrid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (225:12) {:else}
+    // (227:12) {:else}
     function create_else_block$2(ctx) {
     	let div;
 
@@ -3677,7 +3687,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "Additional movements will be here.\r\n                ";
-    			add_location(div, file$4, 225, 16, 10811);
+    			add_location(div, file$4, 227, 16, 10958);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3691,14 +3701,14 @@ var app = (function () {
     		block,
     		id: create_else_block$2.name,
     		type: "else",
-    		source: "(225:12) {:else}",
+    		source: "(227:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (212:20) <div slot="header">
+    // (214:20) <div slot="header">
     function create_header_slot$2(ctx) {
     	let div;
     	let t_value = /*modifier*/ ctx[36]["category"] + "";
@@ -3709,7 +3719,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "header");
-    			add_location(div, file$4, 211, 20, 10235);
+    			add_location(div, file$4, 213, 20, 10382);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3727,14 +3737,14 @@ var app = (function () {
     		block,
     		id: create_header_slot$2.name,
     		type: "slot",
-    		source: "(212:20) <div slot=\\\"header\\\">",
+    		source: "(214:20) <div slot=\\\"header\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (215:20) <div slot="body">
+    // (217:20) <div slot="body">
     function create_body_slot_1$2(ctx) {
     	let div;
     	let t_value = /*modifier*/ ctx[36].name + "";
@@ -3745,7 +3755,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "body");
-    			add_location(div, file$4, 214, 20, 10352);
+    			add_location(div, file$4, 216, 20, 10499);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3763,14 +3773,14 @@ var app = (function () {
     		block,
     		id: create_body_slot_1$2.name,
     		type: "slot",
-    		source: "(215:20) <div slot=\\\"body\\\">",
+    		source: "(217:20) <div slot=\\\"body\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (221:20) <div class="close-button" slot="footer" on:click={()=>removeModifier(modifier)}>
+    // (223:20) <div class="close-button" slot="footer" on:click={()=>removeModifier(modifier)}>
     function create_footer_slot_1$2(ctx) {
     	let div0;
     	let t0;
@@ -3792,10 +3802,10 @@ var app = (function () {
     			div1 = element("div");
     			div1.textContent = "×";
     			attr_dev(div0, "slot", "footer");
-    			add_location(div0, file$4, 217, 20, 10460);
+    			add_location(div0, file$4, 219, 20, 10607);
     			attr_dev(div1, "class", "close-button");
     			attr_dev(div1, "slot", "footer");
-    			add_location(div1, file$4, 220, 20, 10602);
+    			add_location(div1, file$4, 222, 20, 10749);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -3824,14 +3834,14 @@ var app = (function () {
     		block,
     		id: create_footer_slot_1$2.name,
     		type: "slot",
-    		source: "(221:20) <div class=\\\"close-button\\\" slot=\\\"footer\\\" on:click={()=>removeModifier(modifier)}>",
+    		source: "(223:20) <div class=\\\"close-button\\\" slot=\\\"footer\\\" on:click={()=>removeModifier(modifier)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (211:16) <Modifier>
+    // (213:16) <Modifier>
     function create_default_slot_1$2(ctx) {
     	let t0;
     	let t1;
@@ -3864,14 +3874,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(211:16) <Modifier>",
+    		source: "(213:16) <Modifier>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (210:12) {#each $fragmentState.modifiers as modifier}
+    // (212:12) {#each $fragmentState.modifiers as modifier}
     function create_each_block$2(ctx) {
     	let modifier;
     	let current;
@@ -3924,14 +3934,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(210:12) {#each $fragmentState.modifiers as modifier}",
+    		source: "(212:12) {#each $fragmentState.modifiers as modifier}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (145:4) <div slot="body" class="container">
+    // (147:4) <div slot="body" class="container">
     function create_body_slot$2(ctx) {
     	let div0;
     	let div2;
@@ -4020,44 +4030,44 @@ var app = (function () {
 
     			option0.__value = "hybrid";
     			option0.value = option0.__value;
-    			add_location(option0, file$4, 149, 20, 6880);
+    			add_location(option0, file$4, 151, 20, 7027);
     			option1.__value = "transition";
     			option1.value = option1.__value;
-    			add_location(option1, file$4, 150, 20, 6940);
+    			add_location(option1, file$4, 152, 20, 7087);
     			select.disabled = true;
     			select.required = true;
     			attr_dev(select, "class", "custom-select");
     			if (/*$fragmentState*/ ctx[10].type === void 0) add_render_callback(() => /*select_change_handler*/ ctx[16].call(select));
-    			add_location(select, file$4, 147, 16, 6730);
-    			add_location(label0, file$4, 146, 12, 6701);
+    			add_location(select, file$4, 149, 16, 6877);
+    			add_location(label0, file$4, 148, 12, 6848);
     			attr_dev(label1, "for", "startTime");
-    			add_location(label1, file$4, 154, 16, 7115);
+    			add_location(label1, file$4, 156, 16, 7262);
     			attr_dev(input0, "id", "startTime");
     			input0.required = true;
     			attr_dev(input0, "pattern", "[0-9]:[0-9][0-9]");
     			attr_dev(input0, "placeholder", "0:00");
     			attr_dev(input0, "class", "form-control");
-    			add_location(input0, file$4, 155, 16, 7174);
+    			add_location(input0, file$4, 157, 16, 7321);
     			attr_dev(label2, "for", "endTime");
-    			add_location(label2, file$4, 158, 16, 7403);
+    			add_location(label2, file$4, 160, 16, 7550);
     			attr_dev(input1, "id", "endTime");
     			input1.required = true;
     			attr_dev(input1, "pattern", "[0-9]:[0-9][0-9]");
     			attr_dev(input1, "placeholder", "0:00");
     			attr_dev(input1, "class", "form-control");
-    			add_location(input1, file$4, 159, 16, 7458);
+    			add_location(input1, file$4, 161, 16, 7605);
     			set_style(div1, "display", "flex");
     			set_style(div1, "flex-direction", "row");
-    			add_location(div1, file$4, 153, 12, 7049);
+    			add_location(div1, file$4, 155, 12, 7196);
     			attr_dev(button, "class", "btn btn-outline-primary svelte-1o5e5c");
-    			add_location(button, file$4, 206, 12, 9981);
+    			add_location(button, file$4, 208, 12, 10128);
     			attr_dev(div2, "class", "form");
-    			add_location(div2, file$4, 145, 8, 6669);
+    			add_location(div2, file$4, 147, 8, 6816);
     			attr_dev(div3, "class", "modifiers svelte-1o5e5c");
-    			add_location(div3, file$4, 208, 8, 10104);
+    			add_location(div3, file$4, 210, 8, 10251);
     			attr_dev(div0, "slot", "body");
     			attr_dev(div0, "class", "container svelte-1o5e5c");
-    			add_location(div0, file$4, 144, 4, 6624);
+    			add_location(div0, file$4, 146, 4, 6771);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -4226,14 +4236,14 @@ var app = (function () {
     		block,
     		id: create_body_slot$2.name,
     		type: "slot",
-    		source: "(145:4) <div slot=\\\"body\\\" class=\\\"container\\\">",
+    		source: "(147:4) <div slot=\\\"body\\\" class=\\\"container\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (232:4) <div slot="footer" class="footer">
+    // (234:4) <div slot="footer" class="footer">
     function create_footer_slot$2(ctx) {
     	let div;
     	let button0;
@@ -4251,12 +4261,12 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Dismiss";
     			attr_dev(button0, "class", "btn btn-primary svelte-1o5e5c");
-    			add_location(button0, file$4, 232, 8, 10995);
+    			add_location(button0, file$4, 234, 8, 11142);
     			attr_dev(button1, "class", "btn btn-danger svelte-1o5e5c");
-    			add_location(button1, file$4, 233, 8, 11079);
+    			add_location(button1, file$4, 235, 8, 11226);
     			attr_dev(div, "slot", "footer");
     			attr_dev(div, "class", "footer svelte-1o5e5c");
-    			add_location(div, file$4, 231, 4, 10951);
+    			add_location(div, file$4, 233, 4, 11098);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4285,14 +4295,14 @@ var app = (function () {
     		block,
     		id: create_footer_slot$2.name,
     		type: "slot",
-    		source: "(232:4) <div slot=\\\"footer\\\" class=\\\"footer\\\">",
+    		source: "(234:4) <div slot=\\\"footer\\\" class=\\\"footer\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:0) <Modal on:close="{hideEditFragmentModal}" z_index=1>
+    // (141:0) <Modal on:close="{hideEditFragmentModal}" z_index=1>
     function create_default_slot$2(ctx) {
     	let t0;
     	let t1;
@@ -4319,7 +4329,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(139:0) <Modal on:close=\\\"{hideEditFragmentModal}\\\" z_index=1>",
+    		source: "(141:0) <Modal on:close=\\\"{hideEditFragmentModal}\\\" z_index=1>",
     		ctx
     	});
 
@@ -4409,7 +4419,7 @@ var app = (function () {
     	let inputDirection;
     	let inputSupport;
     	let inputRotations;
-    	let { fragment } = $$props;
+    	let { fragment = {} } = $$props;
     	let { index } = $$props;
     	fragmentState.set(fragment);
 
@@ -4427,8 +4437,8 @@ var app = (function () {
     	});
 
     	const saveFragment = function () {
-    		let fragment = get_store_value(fragmentState);
-    		let program = get_store_value(routineState);
+    		let fragment = Object.assign({}, get_store_value(fragmentState));
+    		let program = Object.assign({}, get_store_value(routineState));
     		fragment.duration = calculateFragmentDuration(fragment);
 
     		if (fragment.type === "hybrid") {
@@ -4437,6 +4447,7 @@ var app = (function () {
 
     		fragment.basicMark = calculateFragmentBasicMark(fragment);
     		fragment.difficulty = calculateFragmentDifficulty(fragment, program.type);
+    		fragment.modifiers = excludeNonUniqueModifiers(fragment);
 
     		set_store_value(
     			routineState,
@@ -4658,6 +4669,7 @@ var app = (function () {
     		calculateHybridLevel,
     		calculateFragmentDuration,
     		calculateHybridTime,
+    		excludeNonUniqueModifiers,
     		Modal,
     		Modifier,
     		autoModifiers,
@@ -4752,10 +4764,6 @@ var app = (function () {
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
-
-    		if (/*fragment*/ ctx[14] === undefined && !("fragment" in props)) {
-    			console.warn("<EditFragmentModal> was created without expected prop 'fragment'");
-    		}
 
     		if (/*index*/ ctx[0] === undefined && !("index" in props)) {
     			console.warn("<EditFragmentModal> was created without expected prop 'index'");
@@ -7931,7 +7939,7 @@ var app = (function () {
     			t1 = space();
     			div2 = element("div");
     			div1 = element("div");
-    			div1.textContent = "v. 0.5.2";
+    			div1.textContent = "v. 0.5.4";
     			t3 = space();
     			create_component(main.$$.fragment);
     			t4 = space();
