@@ -6,5 +6,30 @@
       "duet": null,
       "team": 0.3
     }
+  },
+  {
+    "name": "Short hybrid at the end of the routine",
+    "values": {
+      "solo": 0.1,
+      "duet": 0.1,
+      "team": 0.1
+    }
+  },
+  {
+    "name": "Medium hybrid at the end of the routine",
+    "values": {
+      "solo": 0.2,
+      "duet": 0.2,
+      "team": 0.2
+
+    }
+  },
+  {
+    "name": "Long hybrid at the end of the routine",
+    "values": {
+      "solo": 0.3,
+      "duet": 0.3,
+      "team": 0.3
+    }
   }
 ]
