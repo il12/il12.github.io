@@ -1,5 +1,5 @@
 body, html, .container {
-	margin : 0px; 
+	margin : 0px;
 	padding : 0px;
 	width : 100%;
 	height : 100%;
@@ -11,6 +11,7 @@ body, html, .container {
 
 
 .first-row .logo {
+	margin-top: 1%;
 	margin-left : 3%;
 }
 
@@ -32,13 +33,13 @@ body, html, .container {
 }
 
 .name, .archive, .contacts, .search {
-	text-align : center;	
+	text-align : center;
 }
 
 .link {
 	transition-property: all;
 	transition-duration : 0.2s;
-	transition-timing-function : ease-in;		
+	transition-timing-function : ease-in;
 }
 
 .link:hover {
@@ -53,7 +54,7 @@ body, html, .container {
 	color : rgb(255,255,255);
 	transition-property: all;
 	transition-duration : 0.2s;
-	transition-timing-function : ease-in;	
+	transition-timing-function : ease-in;
 }
 
 .link a:hover{
@@ -67,7 +68,7 @@ body, html, .container {
 	fill : rgb(255,255,255);
 	transition-property: all;
 	transition-duration : 0.2s;
-	transition-timing-function : ease-in;	
+	transition-timing-function : ease-in;
 }
 
 .svg-icon path{
@@ -87,12 +88,12 @@ body, html, .container {
 	width : 40px;
 	transition-property: all;
 	transition-duration : 0.2s;
-	transition-timing-function : ease-in;	
-}	
+	transition-timing-function : ease-in;
+}
 .png-link-icon:hover{
 	cursor : pointer;
 	transform : scale(1.04);
-	filter: drop-shadow( 1px 1px 10px #ffffff);	
+	filter: drop-shadow( 1px 1px 10px #ffffff);
 }
 
 /*---------------------*/
@@ -112,7 +113,7 @@ body, html, .container {
 	margin-top : 5%;
 }
 
-.button{	
+.button{
 	border-radius: 15px;
 	background-color : rgb(255,80,5);
 	width : 232px;
@@ -122,16 +123,16 @@ body, html, .container {
 	border : none;
 	transition-property: all;
 	transition-duration : 0.3s;
-	transition-timing-function : ease-in;	
-	Font-Size: 20px;	
+	transition-timing-function : ease-in;
+	Font-Size: 20px;
 	color : rgb(230,230,230);
-	
+
 }
 
-.button:hover{	
+.button:hover{
 	background-color : rgb(255,40,0);
 	color : rgb(255,255,255);
-	
+
 }
 
 .second-row .photo {
@@ -148,7 +149,7 @@ body, html, .container {
 	text-align : center;
 	Font-Family: Fira Sans;
 	Font-Size: 36px;
-	color : rgb(255,255,255);	
+	color : rgb(255,255,255);
 }
 
 .year-wrap {
@@ -159,7 +160,7 @@ body, html, .container {
 	text-align : center;
 	transition-property: all;
 	transition-duration : 0.3s;
-	transition-timing-function : ease-in;	
+	transition-timing-function : ease-in;
 	margin-top : 2%;
 }
 
@@ -171,16 +172,16 @@ body, html, .container {
 .year-wrap a{
 	Font-Family: Fira Sans;
 	Font-Size: 25px;
-	color : rgb(255,255,255);		
+	color : rgb(255,255,255);
 	text-decoration : none;
 	outline : none;
 	transition-property: all;
 	transition-duration : 0.3s;
-	transition-timing-function : ease-in;	
+	transition-timing-function : ease-in;
 }
 
 .year-wrap a:hover{
-	text-shadow : 1px 1px 10px rgba(230,230,230,0.6);	
+	text-shadow : 1px 1px 10px rgba(230,230,230,0.6);
 	color : rgb(200,200,200);
 }
 
@@ -197,7 +198,7 @@ body, html, .container {
 	margin-right : 5px;
 	transition-property: all;
 	transition-duration : 0.3s;
-	transition-timing-function : ease-in;		
+	transition-timing-function : ease-in;
 }
 
 .footer .made-with img:hover{
@@ -209,7 +210,7 @@ body, html, .container {
 	Font-Family: Fira Sans;
 	font-weight : light;
 	Font-Size: 24px;
-	color : rgb(255,255,255);		
+	color : rgb(255,255,255);
 }
 
 
@@ -223,34 +224,34 @@ body, html, .container {
 	.name {
 		margin-top : 3.0%;
 	}
-	
+
 	.link, .archive, .contacts, .search {
 		margin-top : 3.5%;
 	}
-	
+
 	.photo img {
 		width : 253px;
 		height : 313px;
-	}	
-	
+	}
+
 	.second-row .button {
 		margin-top : 50px;
 		margin-right : -5%;
 	}
-	
+
 	.second-row{
 		margin-top : 7%;
-	}	
-	
+	}
+
 	.third-row {
 		margin-top : 15.5%;
 		padding-bottom : 2%;
 	}
-	
+
 	.second-row .text .header, .second-row .text .body{
-		text-align: right;	
+		text-align: right;
 	}
-	
+
 	.margin {
 		margin-top : 10%;
 	}
@@ -260,13 +261,13 @@ body, html, .container {
 
 @media (max-width: 991px) {
 	.second-row .text .header, .second-row .text .body{
-		text-align: center;	
-	}	
+		text-align: center;
+	}
 
 	.second-row .button {
 		margin-top : 50px;
-		
-	}	
+
+	}
 
 	.link{
 		Font-Size: 36px;
@@ -276,22 +277,22 @@ body, html, .container {
 		margin-left : 40px;
 		margin-right : 40px;
 		margin-top : 5px;
-	}	
-	
+	}
+
 	.margin {
 		margin-top : 10%;
-	}	
-	
+	}
+
 }
 
 /* Телефоны */
 
 @media (max-width: 767px) {
-	
+
 	.photo img {
-		width : 60%;	
-	}	
-	
+		width : 60%;
+	}
+
 
 }
 
