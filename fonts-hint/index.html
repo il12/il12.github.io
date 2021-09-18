@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face{
+            font-family: "KenneyIcons";
+            src: url("webfonts/kenney-icon-font.eot");
+            src: url("webfonts/kenney-icon-font.eot") format("embedded-opentype"),
+            url("webfonts/kenney-icon-font.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Font Awesome 5 Free';
+            font-style: normal;
+            font-weight: 400;
+            font-display: block;
+            src: url("webfonts/fa-regular-400.eot");
+            src: url("webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("webfonts/fa-regular-400.woff2") format("woff2"), url("webfonts/fa-regular-400.woff") format("woff"), url("webfonts/fa-regular-400.ttf") format("truetype"), url("webfonts/fa-regular-400.svg#fontawesome") format("svg");
+        }
+
+        .ki, .kenney-icon{
+            speak: none;
+            display: inline-block;
+            font: normal normal normal 16px/1 "KenneyIcons";
+            font-size: xx-large;
+            vertical-align: top;
+            text-transform: none;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .fab {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Font Awesome 5 Free';
+            font-size: xx-large;
+            font-weight: 400;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1; }
+        ul {
+            columns: 8;
+            -webkit-columns: 8;
+            -moz-columns: 8;
+        }
+    </style>
+</head>
+<body>
+<ul id='list'>
+</ul>
+<script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+        let string = `£€$¥Ƀ¢¤©®™ⓂⓅ△⬜♢○◉◎✂✄✔✖✅✘❌♠♥♦♣♤♡♢♧≈∅°µπ§¶·—‘’“”†‡•…‽⁂№•·⏎⌫ ★☆☐☑☒☛☞✓✗〃⎘☍⎀✂⏰⏱⏲⏳⏴⏵⏶⏷⏸⏹⏺🔁☺⌨✎✍✉←↑→↓↔↕⇄⇅↲↳↰↱↱⇤⇥ ↶↷↻⟳⟲➔↯↖➘➙➚➟⇠➤⇦⇨⇨«»►◀▲▼▷◁△▽➴●⏳★☆🔥🔧🔗🕑♫♪🔊💡❄⚑🔒🔓🔎🎧 🌐🎥💾🎮🏃🏆🏆🏁💢💿📷🔍🔧🔨🔀🔀🔂🔂🔑📎👤👥🔔🔕               `
+        let list = Array.from(string).reduce((acc, symbol)=>{
+            if(symbol.charCodeAt(0) !== 32) {
+                if (symbol.charCodeAt(0) < 59834) {
+                    return `${acc}<li>\\u${symbol.charCodeAt(0).toString(16).padStart(4,0)} - <span class="kenney-icon ki">${symbol}</span>`
+                } else {
+                    return `${acc}<li>\\u${symbol.charCodeAt(0).toString(16)} - <span class="fab">${symbol}</span>`
+                }
+            } else {
+                return acc;
+            }
+        },'')
+        document.getElementById('list').insertAdjacentHTML("afterbegin", list);
+    });
+</script>
+</body>
+</html>

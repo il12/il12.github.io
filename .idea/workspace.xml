@@ -25,36 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96c80d1d-7abb-4d60-9203-b47bb1eeb1ca" name="Default Changelist" comment="&quot;Portfolio: added 1 Masters year&quot;">
+    <list default="true" id="96c80d1d-7abb-4d60-9203-b47bb1eeb1ca" name="Default Changelist" comment="Portfolio: updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/custom-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/custom-styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/1_evm.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/1_evm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/1_inf.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/1_inf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/1_it_math.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/1_it_math.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/1_it_phys.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/1_it_phys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/1_progr.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/1_progr.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/2_andan.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/2_andan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/2_data_bases.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/2_data_bases.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/2_os.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/2_os.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/2_projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/2_projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/2_tcm.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/2_tcm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/2_vm.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/2_vm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/2_web_apps.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/2_web_apps.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/3_icg.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/3_icg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/3_sit.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/3_sit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/3_zi.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/3_zi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/4_pi.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/4_pi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/5_web.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/5_web.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/first_year.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/first_year.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/five_year.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/five_year.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/fourth_year.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/fourth_year.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/progr.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/progr.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/second_year.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/second_year.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjects/third_year.html" beforeDir="false" afterPath="$PROJECT_DIR$/subjects/third_year.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/years.html" beforeDir="false" afterPath="$PROJECT_DIR$/years.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +54,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SynchroDifficultySvelte" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -101,7 +79,8 @@
       <option name="presentableId" value="Default" />
       <updated>1594290766808</updated>
       <workItem from="1594290768172" duration="2017000" />
-      <workItem from="1610549849888" duration="1361000" />
+      <workItem from="1610549849888" duration="2589000" />
+      <workItem from="1610731915651" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Portfolio: added 1 Masters year&quot;">
       <created>1594291661619</created>
@@ -110,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594291661619</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Portfolio: updated">
+      <created>1610551493621</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610551493621</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Portfolio: updated">
+      <created>1610551741017</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610551741017</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Portfolio: added 1 Masters year&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Portfolio: added 1 Masters year&quot;" />
+    <MESSAGE value="Portfolio: updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Portfolio: updated" />
   </component>
 </project>
