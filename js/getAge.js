@@ -2,7 +2,7 @@ let today = new Date();
 let birthday = new Date('1998-04-05');
 let age = Math.floor((today-birthday)/1000/60/60/24/365)
 let word = getRightWord(age);
-let fullAge = `${age} ${word}`
+let fullAge = `${age} years`
 
 let fullAgeElement = document.getElementById('age');
 fullAgeElement.innerHTML = fullAge;
