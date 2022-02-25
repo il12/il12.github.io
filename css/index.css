@@ -1,0 +1,451 @@
+@font-face {
+    font-family: "Fira Sans";
+    src: url("/fonts/FiraSans-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url("/fonts/FiraSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+img.photo{
+    width: 30vw;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+}
+
+html, body {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: normal;
+    font-size: large;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    color: black;
+    background-image: url("/img/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+a, a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.technologies > .level {
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.technology {
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.technology:hover {
+    fill: rgba(0, 0, 0, 0.6);
+    transform: scale(1.04);
+    filter: drop-shadow(1px 1px 10px #ffffff);
+}
+
+.beginner > .technology{
+    background-color: rgba(205, 127, 50, 1);
+    border: 3px solid rgba(190, 100, 50, 1);
+}
+
+.advanced > .technology{
+    background-color: rgba(192, 192, 192, 1);
+    border: 3px solid rgba(220, 220, 220, 1);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 0 10px 0;
+}
+
+.project > .header {
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project > .footer {
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: space-between;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.name {
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-grow: 0;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tech {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    gap: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    gap: 10px;
+}
+
+.majorov {
+    background-image: url("/img/majorov.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pazaak {
+    background-image: url("/img/pazaak.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.synchrodifficulty {
+    background-image: url("/img/synchrodifficulty.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.synchroreg {
+    background-image: url("/img/synchroreg.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.svg-icon {
+    width: 40px;
+    height: auto;
+    fill: rgba(0, 0, 0, 0.4);
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.svg-icon:hover {
+    fill: rgba(0, 0, 0, 0.6);
+    transform: scale(1.04);
+    filter: drop-shadow(1px 1px 10px #ffffff);
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-inner{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    right: 0;
+    transition: right .5s;
+    gap: 10px;
+}
+
+.slider-item{
+    flex-basis: 33.33%;
+    flex-shrink: 0;
+    display: block;
+}
+
+.project {
+    flex-shrink: 0;
+    border-radius: 10px;
+    width: 30vw;
+    height: calc((30vw * 9) / 16);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.project:hover {
+    transform: scale(1.04);
+}
+
+
+.link {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.link:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.link a {
+    text-decoration: none;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.link a:hover {
+    color: rgb(230, 230, 230);
+    outline: none;
+    text-shadow: 1px 1px 10px #000;
+}
+
+.horizontal-divider {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mx-3 {
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.mx-5 {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.projects {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.right-btn {
+    z-index: 100;
+    width: calc((100vw - 90vw + 30px) / 4);
+    height: inherit;
+    cursor: pointer;
+}
+
+.left-btn {
+    z-index: 100;
+    width: calc((100vw - 90vw + 30px) / 4);
+    height: inherit;
+    cursor: pointer;
+}
+
+.start-item{
+    order: 1 !important;
+}
+
+.sm-only{
+    display: none;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.other{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacts > h2{
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.contacts > a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.other > a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+    width:90vw;
+}
+
+.brief{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ml-5{
+    margin-left: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+    img.photo{
+        width: 80vw;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .sm-only{
+        display: block;
+    }
+
+    .slider {
+        display: block;
+        margin: 10px;
+    }
+
+    .slider-inner{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .slider-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project {
+        width: 80vw;
+        height: calc((80vw * 9) / 16);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in;
+    }
+
+    .right-btn {
+        display: none;
+    }
+
+    .left-btn {
+        display: none;
+    }
+
+    .technologies{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .technologies > .beginner{
+        order: 1;
+    }
+
+    .technologies > .advanced{
+        order: 2;
+    }
+
+    .technologies > .level {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
