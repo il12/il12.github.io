@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.6cee19c7.css",
-    "main.js": "/static/js/main.2b29f00b.js",
-    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
-    "static/media/background.jpg": "/static/media/background.5758db0620c5419ddcfa.jpg",
-    "index.html": "/index.html",
-    "main.6cee19c7.css.map": "/static/css/main.6cee19c7.css.map",
-    "main.2b29f00b.js.map": "/static/js/main.2b29f00b.js.map",
-    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+    "main.css": "/projects/twentiesttwenty/static/css/main.8d372266.css",
+    "main.js": "/projects/twentiesttwenty/static/js/main.8667a608.js",
+    "static/js/787.cda612ba.chunk.js": "/projects/twentiesttwenty/static/js/787.cda612ba.chunk.js",
+    "static/media/background.jpg": "/projects/twentiesttwenty/static/media/background.5758db0620c5419ddcfa.jpg",
+    "index.html": "/projects/twentiesttwenty/index.html",
+    "main.8d372266.css.map": "/projects/twentiesttwenty/static/css/main.8d372266.css.map",
+    "main.8667a608.js.map": "/projects/twentiesttwenty/static/js/main.8667a608.js.map",
+    "787.cda612ba.chunk.js.map": "/projects/twentiesttwenty/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cee19c7.css",
-    "static/js/main.2b29f00b.js"
+    "static/css/main.8d372266.css",
+    "static/js/main.8667a608.js"
   ]
 }
