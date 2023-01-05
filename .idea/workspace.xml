@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -44,26 +47,30 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1eRiNbHXYiLAsNnFyMFXqgiTdyw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SynchroDifficultySvelte" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/iskopaem0e/WebstormProjects/il12.github.io/projects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/projects" />
       <recent name="C:\Users\Игорь\Documents\il12.github.io\subjects" />
     </key>
   </component>
@@ -81,6 +88,9 @@
       <workItem from="1594290768172" duration="2017000" />
       <workItem from="1610549849888" duration="2589000" />
       <workItem from="1610731915651" duration="59000" />
+      <workItem from="1669736333505" duration="2629000" />
+      <workItem from="1669811113529" duration="39000" />
+      <workItem from="1669980629524" duration="145000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Portfolio: added 1 Masters year&quot;">
       <created>1594291661619</created>
@@ -103,7 +113,77 @@
       <option name="project" value="LOCAL" />
       <updated>1610551741017</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Portfolio: updated">
+      <created>1669736431263</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669736431263</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Portfolio: updated">
+      <created>1669736589037</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669736589037</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Portfolio: updated">
+      <created>1669736673086</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669736673086</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Portfolio: updated">
+      <created>1669736717188</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669736717188</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Portfolio: updated">
+      <created>1669736783431</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669736783431</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Portfolio: updated">
+      <created>1669736953368</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669736953368</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Portfolio: updated">
+      <created>1669737011601</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669737011601</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Portfolio: updated">
+      <created>1669737249168</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669737249168</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Portfolio: updated">
+      <created>1669809635863</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669809635863</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Portfolio: updated">
+      <created>1669809723012</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669809723012</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +226,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Portfolio: added 1 Masters year&quot;" />
