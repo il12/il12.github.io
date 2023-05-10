@@ -184,6 +184,14 @@ a, a:hover, a:visited, a:link, a:active {
     background-size: cover;
 }
 
+.astools {
+    background-image: url("/img/astools.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .synchroreg {
     background-image: url("/img/synchroreg.JPG");
     background-position: center;
@@ -429,7 +437,7 @@ a, a:hover, a:visited, a:link, a:active {
         display: none;
     }
 
-    .technologies{
+    .technologies {
         display: flex;
         flex-direction: row;
     }
@@ -445,7 +453,7 @@ a, a:hover, a:visited, a:link, a:active {
     .technologies > .level {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
     }
 }
