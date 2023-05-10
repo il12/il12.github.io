@@ -28,11 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96c80d1d-7abb-4d60-9203-b47bb1eeb1ca" name="Default Changelist" comment="Portfolio: updated">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="96c80d1d-7abb-4d60-9203-b47bb1eeb1ca" name="Default Changelist" comment="Portfolio: updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +90,7 @@
       <workItem from="1669811113529" duration="39000" />
       <workItem from="1669980629524" duration="145000" />
       <workItem from="1683726671017" duration="2082000" />
+      <workItem from="1683734191729" duration="790000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Portfolio: added 1 Masters year&quot;">
       <created>1594291661619</created>
@@ -186,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669809723012</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Portfolio: updated">
+      <created>1683734286236</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1683734286236</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
