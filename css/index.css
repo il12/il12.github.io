@@ -191,6 +191,13 @@ a, a:hover, a:visited, a:link, a:active {
     background-size: cover;
 }
 
+.afisha-peredelano {
+    background-image: url("/img/afisha.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .synchroreg {
     background-image: url("/img/synchroreg.JPG");
